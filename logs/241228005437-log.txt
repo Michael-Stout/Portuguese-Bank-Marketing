@@ -1,0 +1,390 @@
+2024-12-28 00:54:37 | Analysis | INFO | This is an info message.
+2024-12-28 00:54:37 | Analysis | WARNING | This is a warning message.
+2024-12-28 00:54:37 | Analysis | ERROR | This is an error message.
+2024-12-28 00:54:38 | Analysis | INFO | Output directory configured: output
+2024-12-28 00:54:38 | Analysis | INFO | Future warnings suppressed
+2024-12-28 00:54:38 | Analysis | INFO | Successfully loaded the marketing_data dataset
+2024-12-28 00:54:38 | Analysis | INFO | marketing_data Dataset Information
+
+2024-12-28 00:54:38 | Analysis | INFO | Shape: (4119, 21)
+
+2024-12-28 00:54:38 | Analysis | INFO | Number of Null Values: 0
+
+2024-12-28 00:54:38 | Analysis | INFO | Data types:
+
+object     11
+int64       5
+float64     5
+Name: count, dtype: int64
+
+2024-12-28 00:54:38 | Analysis | INFO | Descriptive Statistics:
+
+            age     duration   campaign       pdays  previous  emp.var.rate  cons.price.idx  cons.conf.idx  euribor3m  nr.employed
+mean  40.113620   256.788055   2.537266  960.422190  0.190337      0.084972       93.579704     -40.499102   3.621356  5166.481695
+std   10.313362   254.703736   2.568159  191.922786  0.541788      1.563114        0.579349       4.594578   1.733591    73.667904
+min   18.000000     0.000000   1.000000    0.000000  0.000000     -3.400000       92.201000     -50.800000   0.635000  4963.600000
+max   88.000000  3643.000000  35.000000  999.000000  6.000000      1.400000       94.767000     -26.900000   5.045000  5228.100000
+
+2024-12-28 00:54:38 | Analysis | INFO | Five Random Records:
+
+      age         job   marital            education  default housing loan    contact month day_of_week  duration  campaign  pdays  previous     poutcome  emp.var.rate  cons.price.idx  cons.conf.idx  euribor3m  nr.employed    y
+3026   51  technician   married  professional.course       no      no   no   cellular   aug         wed       221         9    999         0  nonexistent           1.4          93.444          -36.1      4.967       5228.1   no
+3287   35  technician  divorced  professional.course       no     yes   no  telephone   jun         thu       312         2    999         0  nonexistent           1.4          94.465          -41.8      4.958       5228.1   no
+3293   47      admin.    single    university.degree       no     yes   no   cellular   aug         thu       156         4    999         0  nonexistent           1.4          93.444          -36.1      4.968       5228.1   no
+1451   36    services   married          high.school  unknown      no   no  telephone   jun         tue        49         2    999         0  nonexistent           1.4          94.465          -41.8      4.961       5228.1   no
+2688   39  technician    single    university.degree  unknown      no  yes   cellular   oct         fri       125         1    999         0  nonexistent          -3.4          92.431          -26.9      0.720       5017.5  yes
+
+2024-12-28 00:54:38 | Analysis | INFO | Descriptive Statistics for age:
+
+AGE
+{'count': 4119.0, 'mean': 40.11361981063365, 'std': 10.313361547199813, 'min': 18.0, '25%': 32.0, '50%': 38.0, '75%': 47.0, 'max': 88.0}
+
+2024-12-28 00:54:38 | Analysis | INFO | Age Histogram Created and saved to output
+
+2024-12-28 00:54:38 | Analysis | INFO | Descriptive Statistics for duration:
+
+DURATION
+{'count': 4119.0, 'mean': 256.7880553532411, 'std': 254.70373612073678, 'min': 0.0, '25%': 103.0, '50%': 181.0, '75%': 317.0, 'max': 3643.0}
+
+2024-12-28 00:54:38 | Analysis | INFO | Duration Histogram Created and saved to output
+
+2024-12-28 00:54:38 | Analysis | INFO | Descriptive Statistics for campaign:
+
+CAMPAIGN
+{'count': 4119.0, 'mean': 2.537266326778344, 'std': 2.568159237578138, 'min': 1.0, '25%': 1.0, '50%': 2.0, '75%': 3.0, 'max': 35.0}
+
+2024-12-28 00:54:38 | Analysis | INFO | Campaign Histogram Created and saved to output
+
+2024-12-28 00:54:38 | Analysis | INFO | Descriptive Statistics for pdays:
+
+PDAYS
+{'count': 4119.0, 'mean': 960.4221898519058, 'std': 191.92278580077644, 'min': 0.0, '25%': 999.0, '50%': 999.0, '75%': 999.0, 'max': 999.0}
+
+2024-12-28 00:54:38 | Analysis | INFO | Pdays Histogram Created and saved to output
+
+2024-12-28 00:54:38 | Analysis | INFO | Descriptive Statistics for previous:
+
+PREVIOUS
+{'count': 4119.0, 'mean': 0.19033746054867687, 'std': 0.5417883234290308, 'min': 0.0, '25%': 0.0, '50%': 0.0, '75%': 0.0, 'max': 6.0}
+
+2024-12-28 00:54:38 | Analysis | INFO | Previous Histogram Created and saved to output
+
+2024-12-28 00:54:38 | Analysis | INFO | Descriptive Statistics for emp.var.rate:
+
+EMP.VAR.RATE
+{'count': 4119.0, 'mean': 0.08497208060208788, 'std': 1.5631144559116763, 'min': -3.4, '25%': -1.8, '50%': 1.1, '75%': 1.4, 'max': 1.4}
+
+2024-12-28 00:54:38 | Analysis | INFO | Emp.var.rate Histogram Created and saved to output
+
+2024-12-28 00:54:38 | Analysis | INFO | Descriptive Statistics for cons.price.idx:
+
+CONS.PRICE.IDX
+{'count': 4119.0, 'mean': 93.57970429715951, 'std': 0.5793488049889662, 'min': 92.201, '25%': 93.075, '50%': 93.749, '75%': 93.994, 'max': 94.767}
+
+2024-12-28 00:54:39 | Analysis | INFO | Cons.price.idx Histogram Created and saved to output
+
+2024-12-28 00:54:39 | Analysis | INFO | Descriptive Statistics for cons.conf.idx:
+
+CONS.CONF.IDX
+{'count': 4119.0, 'mean': -40.49910172371935, 'std': 4.594577506837543, 'min': -50.8, '25%': -42.7, '50%': -41.8, '75%': -36.4, 'max': -26.9}
+
+2024-12-28 00:54:39 | Analysis | INFO | Cons.conf.idx Histogram Created and saved to output
+
+2024-12-28 00:54:39 | Analysis | INFO | Descriptive Statistics for euribor3m:
+
+EURIBOR3M
+{'count': 4119.0, 'mean': 3.621355668851663, 'std': 1.7335912227013557, 'min': 0.635, '25%': 1.334, '50%': 4.857, '75%': 4.961, 'max': 5.045}
+
+2024-12-28 00:54:39 | Analysis | INFO | Euribor3m Histogram Created and saved to output
+
+2024-12-28 00:54:39 | Analysis | INFO | Descriptive Statistics for nr.employed:
+
+NR.EMPLOYED
+{'count': 4119.0, 'mean': 5166.481694586065, 'std': 73.66790355721253, 'min': 4963.6, '25%': 5099.1, '50%': 5191.0, '75%': 5228.1, 'max': 5228.1}
+
+2024-12-28 00:54:39 | Analysis | INFO | Nr.employed Histogram Created and saved to output
+
+2024-12-28 00:54:39 | Analysis | INFO | Distribution for job:
+
+JOB
+               Count  Percentage
+job                             
+admin.          1012       24.57
+blue-collar      884       21.46
+technician       691       16.78
+services         393        9.54
+management       324        7.87
+retired          166        4.03
+self-employed    159        3.86
+entrepreneur     148        3.59
+unemployed       111        2.69
+housemaid        110        2.67
+student           82        1.99
+unknown           39        0.95
+
+2024-12-28 00:54:39 | Analysis | INFO | Relationship plot for job and target variable created and saved to output
+
+2024-12-28 00:54:39 | Analysis | INFO | Distribution for marital:
+
+MARITAL
+          Count  Percentage
+marital                    
+married    2509       60.91
+single     1153       27.99
+divorced    446       10.83
+unknown      11        0.27
+
+2024-12-28 00:54:39 | Analysis | INFO | Relationship plot for marital and target variable created and saved to output
+
+2024-12-28 00:54:39 | Analysis | INFO | Distribution for education:
+
+EDUCATION
+                     Count  Percentage
+education                             
+university.degree     1264       30.69
+high.school            921       22.36
+basic.9y               574       13.94
+professional.course    535       12.99
+basic.4y               429       10.42
+basic.6y               228        5.54
+unknown                167        4.05
+illiterate               1        0.02
+
+2024-12-28 00:54:39 | Analysis | INFO | Relationship plot for education and target variable created and saved to output
+
+2024-12-28 00:54:39 | Analysis | INFO | Distribution for default:
+
+DEFAULT
+         Count  Percentage
+default                   
+no        3315       80.48
+unknown    803       19.50
+yes          1        0.02
+
+2024-12-28 00:54:39 | Analysis | INFO | Relationship plot for default and target variable created and saved to output
+
+2024-12-28 00:54:39 | Analysis | INFO | Distribution for housing:
+
+HOUSING
+         Count  Percentage
+housing                   
+yes       2175       52.80
+no        1839       44.65
+unknown    105        2.55
+
+2024-12-28 00:54:40 | Analysis | INFO | Relationship plot for housing and target variable created and saved to output
+
+2024-12-28 00:54:40 | Analysis | INFO | Distribution for loan:
+
+LOAN
+         Count  Percentage
+loan                      
+no        3349       81.31
+yes        665       16.14
+unknown    105        2.55
+
+2024-12-28 00:54:40 | Analysis | INFO | Relationship plot for loan and target variable created and saved to output
+
+2024-12-28 00:54:40 | Analysis | INFO | Distribution for contact:
+
+CONTACT
+           Count  Percentage
+contact                     
+cellular    2652       64.38
+telephone   1467       35.62
+
+2024-12-28 00:54:40 | Analysis | INFO | Relationship plot for contact and target variable created and saved to output
+
+2024-12-28 00:54:40 | Analysis | INFO | Distribution for month:
+
+MONTH
+       Count  Percentage
+month                   
+may     1378       33.45
+jul      711       17.26
+aug      636       15.44
+jun      530       12.87
+nov      446       10.83
+apr      215        5.22
+oct       69        1.68
+sep       64        1.55
+mar       48        1.17
+dec       22        0.53
+
+2024-12-28 00:54:40 | Analysis | INFO | Relationship plot for month and target variable created and saved to output
+
+2024-12-28 00:54:40 | Analysis | INFO | Distribution for day_of_week:
+
+DAY_OF_WEEK
+             Count  Percentage
+day_of_week                   
+thu            860       20.88
+mon            855       20.76
+tue            841       20.42
+wed            795       19.30
+fri            768       18.65
+
+2024-12-28 00:54:40 | Analysis | INFO | Relationship plot for day_of_week and target variable created and saved to output
+
+2024-12-28 00:54:40 | Analysis | INFO | Distribution for poutcome:
+
+POUTCOME
+             Count  Percentage
+poutcome                      
+nonexistent   3523       85.53
+failure        454       11.02
+success        142        3.45
+
+2024-12-28 00:54:40 | Analysis | INFO | Relationship plot for poutcome and target variable created and saved to output
+
+2024-12-28 00:54:40 | Analysis | INFO | Target variable analysis generated and saved to output directory.
+
+2024-12-28 00:54:40 | Analysis | INFO | Correlation matrix calculated.
+
+2024-12-28 00:54:41 | Analysis | INFO | Correlation matrix generated and saved to output directory.
+
+2024-12-28 00:54:41 | Analysis | INFO | X_train shape: (5868, 53)
+2024-12-28 00:54:41 | Analysis | INFO | X_test shape: (1468, 53)
+2024-12-28 00:54:41 | Analysis | INFO | y_train shape: (5868,)
+2024-12-28 00:54:41 | Analysis | INFO | y_test shape: (1468,)
+2024-12-28 00:54:41 | Analysis | INFO | Creating and Dummy Classifier...
+
+2024-12-28 00:54:41 | Analysis | INFO | Baseline accuracy: 0.500000
+2024-12-28 00:54:41 | Analysis | INFO | Classification Report (Dummy Classifier):
+
+              precision    recall  f1-score   support
+
+           0     0.5000    1.0000    0.6667       734
+           1     0.0000    0.0000    0.0000       734
+
+    accuracy                         0.5000      1468
+   macro avg     0.2500    0.5000    0.3333      1468
+weighted avg     0.2500    0.5000    0.3333      1468
+
+2024-12-28 00:54:41 | Analysis | INFO | Dummy Classifier Results:
+
+           Model  Train Time  Train Accuracy  Test Accuracy
+Dummy Classifier    0.000658             0.5            0.5
+
+2024-12-28 00:54:41 | Analysis | INFO | Training Logistic Regression
+2024-12-28 00:54:41 | Analysis | INFO | Logistic Regression ROC AUC: 0.9438
+2024-12-28 00:54:41 | Analysis | INFO | Logistic Regression Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.88      0.88      0.88       734
+           1       0.88      0.88      0.88       734
+
+    accuracy                           0.88      1468
+   macro avg       0.88      0.88      0.88      1468
+weighted avg       0.88      0.88      0.88      1468
+
+2024-12-28 00:54:41 | Analysis | INFO | Confusion matrix for Logistic Regression created and saved to output
+
+2024-12-28 00:54:41 | Analysis | INFO | Training Decision Tree
+2024-12-28 00:54:41 | Analysis | INFO | Decision Tree ROC AUC: 0.9714
+2024-12-28 00:54:41 | Analysis | INFO | Decision Tree Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.94      0.97       734
+           1       0.95      1.00      0.97       734
+
+    accuracy                           0.97      1468
+   macro avg       0.97      0.97      0.97      1468
+weighted avg       0.97      0.97      0.97      1468
+
+2024-12-28 00:54:41 | Analysis | INFO | Confusion matrix for Decision Tree created and saved to output
+
+2024-12-28 00:54:41 | Analysis | INFO | Training KNN
+2024-12-28 00:54:41 | Analysis | INFO | KNN ROC AUC: 0.9619
+2024-12-28 00:54:41 | Analysis | INFO | KNN Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.97      0.82      0.89       734
+           1       0.85      0.98      0.91       734
+
+    accuracy                           0.90      1468
+   macro avg       0.91      0.90      0.90      1468
+weighted avg       0.91      0.90      0.90      1468
+
+2024-12-28 00:54:42 | Analysis | INFO | Confusion matrix for KNN created and saved to output
+
+2024-12-28 00:54:42 | Analysis | INFO | Training SVM
+2024-12-28 00:54:44 | Analysis | INFO | SVM ROC AUC: 0.9764
+2024-12-28 00:54:44 | Analysis | INFO | SVM Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.97      0.91      0.94       734
+           1       0.91      0.97      0.94       734
+
+    accuracy                           0.94      1468
+   macro avg       0.94      0.94      0.94      1468
+weighted avg       0.94      0.94      0.94      1468
+
+2024-12-28 00:54:44 | Analysis | INFO | Confusion matrix for SVM created and saved to output
+
+2024-12-28 00:54:44 | Analysis | INFO | Comparative Results:
++----+---------------------+------------------+-------------+------------+-------------+----------+--------+-----------+
+|    | Model               |   Train Time (s) |   Train Acc |   Test Acc |   Precision |   Recall |     F1 |   ROC AUC |
+|----+---------------------+------------------+-------------+------------+-------------+----------+--------+-----------|
+|  0 | Logistic Regression |           0.1600 |      0.8805 |     0.8808 |      0.8792 |   0.8828 | 0.8810 |    0.9438 |
+|  1 | Decision Tree       |           0.0400 |      1.0000 |     0.9714 |      0.9459 |   1.0000 | 0.9722 |    0.9714 |
+|  2 | KNN                 |           0.0100 |      0.9323 |     0.8992 |      0.8463 |   0.9755 | 0.9063 |    0.9619 |
+|  3 | SVM                 |           1.4700 |      0.9513 |     0.9380 |      0.9117 |   0.9700 | 0.9399 |    0.9764 |
++----+---------------------+------------------+-------------+------------+-------------+----------+--------+-----------+
+2024-12-28 00:54:44 | Analysis | INFO | Starting hyperparameter tuning for Logistic Regression...
+2024-12-28 00:54:44 | Analysis | INFO | Fitting Logistic Regression with GridSearchCV...
+2024-12-28 00:54:46 | Analysis | INFO | Logistic Regression - Best Parameters: {'C': 100, 'penalty': 'l1', 'solver': 'liblinear'}
+2024-12-28 00:54:46 | Analysis | INFO | Logistic Regression - Test Accuracy: 0.8794277929155313
+2024-12-28 00:54:46 | Analysis | INFO | Logistic Regression - ROC AUC: 0.8794277929155314
+
+2024-12-28 00:54:46 | Analysis | INFO | Starting hyperparameter tuning for Decision Tree...
+2024-12-28 00:54:46 | Analysis | INFO | Fitting Decision Tree with GridSearchCV...
+2024-12-28 00:54:47 | Analysis | INFO | Decision Tree - Best Parameters: {'max_depth': None, 'min_samples_leaf': 1, 'min_samples_split': 2}
+2024-12-28 00:54:47 | Analysis | INFO | Decision Tree - Test Accuracy: 0.9720708446866485
+2024-12-28 00:54:47 | Analysis | INFO | Decision Tree - ROC AUC: 0.9720708446866485
+
+2024-12-28 00:54:47 | Analysis | INFO | Starting hyperparameter tuning for KNN...
+2024-12-28 00:54:47 | Analysis | INFO | Fitting KNN with GridSearchCV...
+2024-12-28 00:54:48 | Analysis | INFO | KNN - Best Parameters: {'metric': 'euclidean', 'n_neighbors': 3, 'weights': 'distance'}
+2024-12-28 00:54:48 | Analysis | INFO | KNN - Test Accuracy: 0.9434604904632152
+2024-12-28 00:54:48 | Analysis | INFO | KNN - ROC AUC: 0.9434604904632152
+
+2024-12-28 00:54:48 | Analysis | INFO | Starting hyperparameter tuning for SVM...
+2024-12-28 00:54:48 | Analysis | INFO | Fitting SVM with GridSearchCV...
+2024-12-28 00:56:25 | Analysis | INFO | SVM - Best Parameters: {'C': 10, 'gamma': 1, 'kernel': 'rbf'}
+2024-12-28 00:56:25 | Analysis | INFO | SVM - Test Accuracy: 0.9986376021798365
+2024-12-28 00:56:25 | Analysis | INFO | SVM - ROC AUC: 0.9986376021798364
+
+2024-12-28 00:56:25 | Analysis | INFO | Starting hyperparameter tuning for Logistic Regression...
+2024-12-28 00:56:25 | Analysis | INFO | Fitting Logistic Regression with GridSearchCV...
+2024-12-28 00:56:26 | Analysis | INFO | Logistic Regression - Best Parameters: {'C': 100, 'penalty': 'l1', 'solver': 'liblinear'}
+2024-12-28 00:56:26 | Analysis | INFO | Logistic Regression - Test Accuracy: 0.8794277929155313
+2024-12-28 00:56:26 | Analysis | INFO | Logistic Regression - ROC AUC: 0.8794277929155314
+
+2024-12-28 00:56:26 | Analysis | INFO | Starting hyperparameter tuning for Decision Tree...
+2024-12-28 00:56:26 | Analysis | INFO | Fitting Decision Tree with GridSearchCV...
+2024-12-28 00:56:27 | Analysis | INFO | Decision Tree - Best Parameters: {'max_depth': None, 'min_samples_leaf': 1, 'min_samples_split': 2}
+2024-12-28 00:56:27 | Analysis | INFO | Decision Tree - Test Accuracy: 0.9720708446866485
+2024-12-28 00:56:27 | Analysis | INFO | Decision Tree - ROC AUC: 0.9720708446866485
+
+2024-12-28 00:56:27 | Analysis | INFO | Starting hyperparameter tuning for KNN...
+2024-12-28 00:56:27 | Analysis | INFO | Fitting KNN with GridSearchCV...
+2024-12-28 00:56:28 | Analysis | INFO | KNN - Best Parameters: {'metric': 'euclidean', 'n_neighbors': 3, 'weights': 'distance'}
+2024-12-28 00:56:28 | Analysis | INFO | KNN - Test Accuracy: 0.9434604904632152
+2024-12-28 00:56:28 | Analysis | INFO | KNN - ROC AUC: 0.9434604904632152
+
+2024-12-28 00:56:28 | Analysis | INFO | Starting hyperparameter tuning for SVM...
+2024-12-28 00:56:28 | Analysis | INFO | Fitting SVM with GridSearchCV...
+2024-12-28 00:58:06 | Analysis | INFO | SVM - Best Parameters: {'C': 10, 'gamma': 1, 'kernel': 'rbf'}
+2024-12-28 00:58:06 | Analysis | INFO | SVM - Test Accuracy: 0.9986376021798365
+2024-12-28 00:58:06 | Analysis | INFO | SVM - ROC AUC: 0.9986376021798364
+
+2024-12-28 00:58:06 | Analysis | INFO | Comparative Results:
++---------------------+------------------+-------------+------------+-------------+----------+--------+-----------+
+| Model               |   Train Time (s) |   Train Acc |   Test Acc |   Precision |   Recall |     F1 |   ROC AUC |
+|---------------------+------------------+-------------+------------+-------------+----------+--------+-----------|
+| Logistic Regression |           1.3952 |      0.8788 |     0.8794 |      0.8799 |   0.8787 | 0.8793 |    0.8794 |
+| Decision Tree       |           0.6608 |      1.0000 |     0.9721 |      0.9471 |   1.0000 | 0.9728 |    0.9721 |
+| KNN                 |           0.7352 |      1.0000 |     0.9435 |      0.8984 |   1.0000 | 0.9465 |    0.9435 |
+| SVM                 |          97.6749 |      1.0000 |     0.9986 |      0.9973 |   1.0000 | 0.9986 |    0.9986 |
++---------------------+------------------+-------------+------------+-------------+----------+--------+-----------+
