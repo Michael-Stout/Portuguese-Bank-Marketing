@@ -40,11 +40,17 @@ The pipeline involves data cleaning, exploratory data analysis (EDA), various cl
 9. euribor3m: Euribor 3-month rate
 10. nr.employed: Number of employees
 
-**Key Numerical Features**:
-	* 	age, campaign, pdays, previous, emp.var.rate, cons.price.idx, cons.conf.idx, euribor3m, nr.employed, etc.
-
-**Key Categorical Features**:
-	* 	job, marital, education, default, housing, loan, contact, month, day_of_week, poutcome
+**Categorical Features**:
+1. job
+2. marital
+3. education
+4. default
+5. housing
+6. loan
+7. contact
+8. month
+9. day_of_week
+10. poutcome
 
 **Summary of Notable Distributions**
 	* 	**job**: ~24.57% admin., 21.46% blue-collar, 16.78% technician, etc.
