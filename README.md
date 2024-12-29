@@ -1,6 +1,7 @@
 **Executive Summary**
 ---
-This project focuses on developing and assessing predictive models to enhance customer subscription rates for long-term deposit products in a marketing campaign. The process includes data preprocessing, exploratory data analysis (EDA), model training, and performance evaluation.
+The goal of this project is to increase long-term deposit accounts through advanced predictive analytics. I analyzed customer behavior patterns and campaign effectiveness by leveraging machine learning techniques to optimize conversion rates.
+
 
 - **Data**: 4,119 examples, 21 features, 1,230 missing entries.
 - **Best Model**: Tuned SVM with 98.77% test accuracy and 0.9973 ROC AUC.
@@ -14,7 +15,9 @@ Utilize SVM for best performance or Decision Tree for speed with minimal perform
 
 While SVM is the champion, it’s also the slowest. Running the code on the larger version of the dataset was canceled after over 12 hours of processing and would require distributed training or more computational resources to complete.
 
-**Overview**
+Key Featues
+
+**Data Description**
 ---
 In this analysis, I explore how to predict potential subscriptions to a long-term deposit product using data from a Portuguese bank marketing campaign.
 
@@ -52,25 +55,32 @@ The pipeline involves data cleaning, exploratory data analysis (EDA), various cl
 9. day_of_week: Last contact day of the week
 10. poutcome: Outcome of the previous marketing campaign
 
-**Summary of Notable Distributions**
-	* 	**job**: ~24.57% admin., 21.46% blue-collar, 16.78% technician, etc.
-	* 	**housing**: ~52.80% yes, ~44.65% no, ~2.55% missing (NaN)
-	* 	**loan**: ~81.31% no, ~16.14% yes, ~2.55% missing
-	* 	**target (y)**: Split was roughly 11% “yes” vs. 89% “no” before upsampling.
-	* 	**Baseline Dummy Classifier**: 0.50 accuracy with upsampled data.
-
 **Exploratory Data Analysis (EDA)**
 ---
-	* 	**Shape & Missingness**: With 4,119 rows and 21 columns, there are 1,230 missing values spread mostly in default, housing, loan, and some education.
-	* 	**Numerical Stats**:
-	* 	Average age is ~40, ranging 18–88.
-	* 	duration (excluded for real modeling) was originally up to ~3,600 seconds.
-	* 	euribor3m & emp.var.rate strongly correlate with economic conditions.
-	* 	**Categorical Distributions**:
-	* 	“admin.” job is largest (24.57%), “blue-collar” next (21.46%).
-	* 	“married” is the largest marital category (60.91%), with ~0.27% missing.
-	* 	**Target Variable**: For the raw data, ~11% “yes” to term deposit vs. ~89% “no”, but an upsampling approach balanced classes to 50/50 in the training set.
 
+**Summary**
+* 	**Shape:** There are 4119 rows and 21 columns
+* 	**Missingness**: There are 1,230 "unknown" values spread mostly in default, housing, loan, and some education.
+
+**Numerical Stats**:
+* 	Average age is ~40, ranging 18–88.
+* 	duration (excluded for real modeling) was originally up to ~3,600 seconds.
+* 	euribor3m & emp.var.rate strongly correlate with economic conditions.
+
+**Categorical Distributions**:
+* 	“admin.” job is largest (24.57%), “blue-collar” next (21.46%).
+* 	“married” is the largest marital category (60.91%), with ~0.27% missing.
+  
+**Target Variable**: For the raw data, ~11% “yes” to term deposit vs. ~89% “no”, but an upsampling approach balanced classes to 50/50 in the training set.
+
+**Summary of Notable Distributions**
+* 	**job**: ~24.57% admin., 21.46% blue-collar, 16.78% technician, etc.
+* 	**housing**: ~52.80% yes, ~44.65% no, ~2.55% missing (NaN)
+* 	**loan**: ~81.31% no, ~16.14% yes, ~2.55% missing
+* 	**target (y)**: Split was roughly 11% “yes” vs. 89% “no” before upsampling.
+* 	**Baseline Dummy Classifier**: 0.50 accuracy with upsampled data.
+
+**Visualization**
 
 
 
