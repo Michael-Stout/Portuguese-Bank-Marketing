@@ -181,6 +181,76 @@ The pipeline involves data cleaning, exploratory data analysis (EDA), various cl
 	* 	“married” is the largest marital category (60.91%), with ~0.27% missing.
 	* 	**Target Variable**: For the raw data, ~11% “yes” to term deposit vs. ~89% “no”, but an upsampling approach balanced classes to 50/50 in the training set.
 
+Visualizations
+Age
+
+Descriptive Statistics for age:
+{'count': 4119.0, 'mean': 40.11361981063365, 'std': 10.313361547199813, 'min': 18.0, '25%': 32.0, '50%': 38.0, '75%': 47.0, 'max': 88.0}
+Shape: Right-skewed, with most ages clustering between the late 20s and early 40s.
+Implication: The population skews younger to middle-aged, but there are still some older customers in the dataset.
+
+Duration
+
+Descriptive Statistics for duration:
+{'count': 4119.0, 'mean': 256.7880553532411, 'std': 254.70373612073678, 'min': 0.0, '25%': 
+Shape: Strongly right-skewed, with a large majority of call durations under ~500 seconds and a very long tail of longer calls.
+Implication: Most calls are relatively short, but a small number can last much longer.
+
+Campaign
+
+Descriptive Statistics for campaign:
+{'count': 4119.0, 'mean': 2.537266326778344, 'std': 2.568159237578138, 'min': 1.0, '25%': 1.0, '50%': 2.0, '75%': 3.0, 'max': 35.0}
+Shape: Heavily right-skewed, with most clients contacted fewer than ~5 times, and a small fraction contacted many more times.
+Implication: The typical client receives a limited number of calls, but some clients have been contacted very frequently.
+
+Pdays
+
+Descriptive Statistics for pdays:
+{'count': 4119.0, 'mean': 960.4221898519058, 'std': 191.92278580077644, 'min': 0.0, '25%': 999.0, '50%': 999.0, '75%': 999.0, 'max': 999.0}
+Shape: Nearly all values are around 999, indicating most clients had not been previously contacted or had a large gap since last contact. A small portion has pdays near zero or other small numbers.
+Implication: The majority are “new” contacts for this campaign (or far removed from past campaigns).
+
+Previous
+
+Descriptive Statistics for previous:
+{'count': 4119.0, 'mean': 0.19033746054867687, 'std': 0.5417883234290308, 'min': 0.0, '25%': 0.0, '50%': 0.0, '75%': 0.0, 'max': 6.0}
+Shape: Dominated by 0 (no previous contacts), with a small portion of 1 or 2, and very few above 2.
+Implication: Most customers did not have contacts in earlier campaigns.
+
+Emp.var.rate
+
+Descriptive Statistics for emp.var.rate:
+{'count': 4119.0, 'mean': 0.08497208060208788, 'std': 1.5631144559116763, 'min': -3.4, '25%': -1.8, '50%': 1.1, '75%': 1.4, 'max': 1.4}
+Shape: Shows distinct peaks around −2 and +1.4, indicating certain economic conditions were more common in the data.
+Implication: Economic circumstances varied but often clustered around these two states.
+
+Cons.price.idx
+
+Descriptive Statistics for cons.price.idx:
+{'count': 4119.0, 'mean': 93.57970429715951, 'std': 0.5793488049889662, 'min': 92.201, '25%': 93.075, '50%': 93.749, '75%': 93.994, 'max': 94.767}
+Shape: Multiple peaks between ~92.5 and 94.5, reflecting different “clusters” of consumer price index values over time.
+Implication: The CPI shifted in steps, possibly tied to different periods in the dataset.
+
+Cons.conf.idx
+
+Descriptive Statistics for cons.conf.idx:
+{'count': 4119.0, 'mean': -40.49910172371935, 'std': 4.594577506837543, 'min': -50.8, '25%': -42.7, '50%': -41.8, '75%': -36.4, 'max': -26.9}
+Shape: Multiple peaks roughly between −50 and −35, showing a few dominant confidence levels.
+Implication: Consumer confidence was generally negative, fluctuating within a limited range.
+
+Euribor3m
+
+{'count': 4119.0, 'mean': 3.621355668851663, 'std': 1.7335912227013557, 'min': 0.635, '25%': 1.334, '50%': 4.857, '75%': 4.961, 'max': 5.045}
+Shape: Two main clusters—one around ~1 and another near ~5—indicating interest rates were either quite low or relatively high, with a “gap” in the middle.
+Implication: Distinct macroeconomic environments during the observed periods.
+
+Nr.employed
+
+Descriptive Statistics for nr.employed:
+{'count': 4119.0, 'mean': 5166.481694586065, 'std': 73.66790355721253, 'min': 4963.6, '25%': 5099.1, '50%': 5191.0, '75%': 5228.1, 'max': 5228.1}
+Shape: Bimodal, with large peaks around ~5100 and ~5200, and smaller peaks under 5000.
+Implication: Employment figures changed sharply over time, suggesting different labor-market conditions across the dataset.
+
 **Modeling Approaches**
 ---
 
