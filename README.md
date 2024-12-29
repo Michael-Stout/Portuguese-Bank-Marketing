@@ -185,12 +185,18 @@ The pipeline involves data cleaning, exploratory data analysis (EDA), various cl
 
 ![Age](output/num_age_distribution.png "Age")
 
-Descriptive Statistics for age:
+**Age of the customer**
+
+**Descriptive Statistics for age:**
 {'count': 4119.0, 'mean': 40.11361981063365, 'std': 10.313361547199813, 'min': 18.0, '25%': 32.0, '50%': 38.0, '75%': 47.0, 'max': 88.0}
-Shape: Right-skewed, with most ages clustering between the late 20s and early 40s.
-Implication: The population skews younger to middle-aged, but there are still some older customers in the dataset.
+
+**Shape:** Right-skewed, with most ages clustering between the late 20s and early 40s.
+
+**Implication:** The population skews younger to middle-aged, but there are still some older customers in the dataset.
 
 Duration
+
+![Age](output/num_duration_distribution.png "Duration")
 
 Descriptive Statistics for duration:
 {'count': 4119.0, 'mean': 256.7880553532411, 'std': 254.70373612073678, 'min': 0.0, '25%': 
@@ -199,12 +205,16 @@ Implication: Most calls are relatively short, but a small number can last much l
 
 Campaign
 
+![Age](output/output/num_campaign_distribution.png "Campaign")
+
 Descriptive Statistics for campaign:
 {'count': 4119.0, 'mean': 2.537266326778344, 'std': 2.568159237578138, 'min': 1.0, '25%': 1.0, '50%': 2.0, '75%': 3.0, 'max': 35.0}
 Shape: Heavily right-skewed, with most clients contacted fewer than ~5 times, and a small fraction contacted many more times.
 Implication: The typical client receives a limited number of calls, but some clients have been contacted very frequently.
 
 Pdays
+
+![Age](output/num_pdays_distribution.pngg "Pdays")
 
 Descriptive Statistics for pdays:
 {'count': 4119.0, 'mean': 960.4221898519058, 'std': 191.92278580077644, 'min': 0.0, '25%': 999.0, '50%': 999.0, '75%': 999.0, 'max': 999.0}
@@ -213,12 +223,16 @@ Implication: The majority are “new” contacts for this campaign (or far remov
 
 Previous
 
+![Age](output/num_previous_distribution.png "Previous")
+
 Descriptive Statistics for previous:
 {'count': 4119.0, 'mean': 0.19033746054867687, 'std': 0.5417883234290308, 'min': 0.0, '25%': 0.0, '50%': 0.0, '75%': 0.0, 'max': 6.0}
 Shape: Dominated by 0 (no previous contacts), with a small portion of 1 or 2, and very few above 2.
 Implication: Most customers did not have contacts in earlier campaigns.
 
 Emp.var.rate
+
+![Age](output/num_emp.var.rate_distribution.png "Emp.var.rate")
 
 Descriptive Statistics for emp.var.rate:
 {'count': 4119.0, 'mean': 0.08497208060208788, 'std': 1.5631144559116763, 'min': -3.4, '25%': -1.8, '50%': 1.1, '75%': 1.4, 'max': 1.4}
@@ -227,12 +241,16 @@ Implication: Economic circumstances varied but often clustered around these two 
 
 Cons.price.idx
 
+![Age](output/num_cons.price.idx_distribution.pngg "Cons.price.idx")
+
 Descriptive Statistics for cons.price.idx:
 {'count': 4119.0, 'mean': 93.57970429715951, 'std': 0.5793488049889662, 'min': 92.201, '25%': 93.075, '50%': 93.749, '75%': 93.994, 'max': 94.767}
 Shape: Multiple peaks between ~92.5 and 94.5, reflecting different “clusters” of consumer price index values over time.
 Implication: The CPI shifted in steps, possibly tied to different periods in the dataset.
 
 Cons.conf.idx
+
+![Age](output/num_cons.conf.idx_distribution.png "Cons.conf.idx")
 
 Descriptive Statistics for cons.conf.idx:
 {'count': 4119.0, 'mean': -40.49910172371935, 'std': 4.594577506837543, 'min': -50.8, '25%': -42.7, '50%': -41.8, '75%': -36.4, 'max': -26.9}
@@ -241,11 +259,15 @@ Implication: Consumer confidence was generally negative, fluctuating within a li
 
 Euribor3m
 
+![Age](output/num_euribor3m_distribution.png "Euribor3m")
+
 {'count': 4119.0, 'mean': 3.621355668851663, 'std': 1.7335912227013557, 'min': 0.635, '25%': 1.334, '50%': 4.857, '75%': 4.961, 'max': 5.045}
 Shape: Two main clusters—one around ~1 and another near ~5—indicating interest rates were either quite low or relatively high, with a “gap” in the middle.
 Implication: Distinct macroeconomic environments during the observed periods.
 
 Nr.employed
+
+![Age](output/num_nr.employed_distribution.png "Nr.employed")
 
 Descriptive Statistics for nr.employed:
 {'count': 4119.0, 'mean': 5166.481694586065, 'std': 73.66790355721253, 'min': 4963.6, '25%': 5099.1, '50%': 5191.0, '75%': 5228.1, 'max': 5228.1}
