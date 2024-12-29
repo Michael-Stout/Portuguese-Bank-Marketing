@@ -202,6 +202,7 @@ The pipeline involves data cleaning, exploratory data analysis (EDA), various cl
 
 **Implication:** The population skews younger to middle-aged, but there are still some older customers in the dataset.
 
+---
 
 ### **Last contact duration in seconds**
 
@@ -214,6 +215,7 @@ The pipeline involves data cleaning, exploratory data analysis (EDA), various cl
 
 **Implication:** Most calls are relatively short, but a small number can last much longer.
 
+---
 
 ### **Number of contacts performed during this campaign**
 
@@ -226,6 +228,7 @@ The pipeline involves data cleaning, exploratory data analysis (EDA), various cl
 
 **Implication:** The typical client receives a limited number of calls, but some clients have been contacted very frequently.
 
+---
 
 ### **Number of days since the client was last contacted**
 
@@ -238,6 +241,7 @@ The pipeline involves data cleaning, exploratory data analysis (EDA), various cl
 
 **Implication:** The majority are “new” contacts for this campaign (or far removed from past campaigns).
 
+---
 
 ### **Number of contacts performed before this campaign**
 
@@ -250,6 +254,7 @@ The pipeline involves data cleaning, exploratory data analysis (EDA), various cl
 
 **Implication:** Most customers did not have contacts in earlier campaigns.
 
+---
 
 ### **Employment variation rate**
 
@@ -262,6 +267,7 @@ The pipeline involves data cleaning, exploratory data analysis (EDA), various cl
 
 **Implication:** Economic circumstances varied but often clustered around these two states.
 
+---
 
 ### **Consumer price index**
 
@@ -274,6 +280,7 @@ The pipeline involves data cleaning, exploratory data analysis (EDA), various cl
 
 **Implication:** The CPI shifted in steps, possibly tied to different periods in the dataset.
 
+---
 
 ### **Consumer confidence index**
 
@@ -286,6 +293,7 @@ The pipeline involves data cleaning, exploratory data analysis (EDA), various cl
 
 **Implication:** Consumer confidence was generally negative, fluctuating within a limited range.
 
+---
 
 ### **Euribor 3-month rate**
 
@@ -298,6 +306,7 @@ The pipeline involves data cleaning, exploratory data analysis (EDA), various cl
 
 **Implication:** Distinct macroeconomic environments during the observed periods.
 
+---
 
 ### **Number of employees**
 
@@ -307,6 +316,7 @@ The pipeline involves data cleaning, exploratory data analysis (EDA), various cl
 **Shape:** Bimodal, with large peaks around ~5100 and ~5200, and smaller peaks under 5000.
 
 **Implication:** Employment figures changed sharply over time, suggesting different labor-market conditions across the dataset.
+
 ---
 
 **Modeling Approaches**
