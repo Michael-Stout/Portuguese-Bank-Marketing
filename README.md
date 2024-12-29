@@ -73,14 +73,12 @@ The pipeline involves data cleaning, exploratory data analysis (EDA), various cl
 * 	**job**: ~24.57% admin., 21.46% blue-collar, 16.78% technician, etc.
 * 	**housing**: ~52.80% yes, ~44.65% no, ~2.55% missing (NaN)
 * 	**loan**: ~81.31% no, ~16.14% yes, ~2.55% missing
-* 	**target (y)**: Split was roughly 11% “yes” vs. 89% “no” before upsampling.
-* 	**Baseline Dummy Classifier**: 0.50 accuracy with upsampled data.
-
-**Visualization**
+  
+**Supporting Visualization and Stats**
 
 ## **Numerical Features**
 
-## **Age of the customer**
+### **Age of the customer**
 
 ![Age](output/num_age_distribution.png "Age")
 
@@ -106,6 +104,16 @@ The pipeline involves data cleaning, exploratory data analysis (EDA), various cl
 
 ---
 
+### **Correlation Matrix**
+
+![Age](output/correlation_matrix.png "Campaign")
+
+**Macro-Economic Cluster**
+*	emp.var.rate, euribor3m, and nr.employed are all strongly positively correlated (in the 0.9+ range).
+*	cons.price.idx also has a notable positive correlation with these variables (around 0.76–0.97).
+
+**Implication:** These four features (employment variation rate, consumer price index, euribor 3-month rate, and number of employees) often move together, likely reflecting broad economic conditions.
+
 ### **Target Variable**
 
 ![Class Distribution](output/class_distribution.png "lass Distribution")
@@ -117,107 +125,7 @@ The pipeline involves data cleaning, exploratory data analysis (EDA), various cl
 **Implication:** This imbalanced class distribution may require special techniques (e.g., class weighting, oversampling, or undersampling) to train fair and robust models. Simply predicting “no” for everyone would achieve ~89% accuracy, so more nuanced methods are needed to improve predictions for the minority (“yes”) class.
 
 
-### **Number of contacts performed during this campaign**
 
-![Age](output/num_campaign_distribution.png "Campaign")
-
-**Descriptive Statistics for campaign:**
-{'count': 4119.0, 'mean': 2.537266326778344, 'std': 2.568159237578138, 'min': 1.0, '25%': 1.0, '50%': 2.0, '75%': 3.0, 'max': 35.0}
-
-**Shape:** Heavily right-skewed, with most clients contacted fewer than ~5 times, and a small fraction contacted many more times.
-
-**Implication:** The typical client receives a limited number of calls, but some clients have been contacted very frequently.
-
----
-
-### **Number of days since the client was last contacted**
-
-![Age](output/num_pdays_distribution.png "Pdays")
-
-**Descriptive Statistics for pdays:**
-{'count': 4119.0, 'mean': 960.4221898519058, 'std': 191.92278580077644, 'min': 0.0, '25%': 999.0, '50%': 999.0, '75%': 999.0, 'max': 999.0}
-
-**Shape:** Nearly all values are around 999, indicating most clients had not been previously contacted or had a large gap since last contact. A small portion has pdays near zero or other small numbers.
-
-**Implication:** The majority are “new” contacts for this campaign (or far removed from past campaigns).
-
----
-
-### **Number of contacts performed before this campaign**
-
-![Age](output/num_previous_distribution.png "Previous")
-
-**Descriptive Statistics for previous:**
-{'count': 4119.0, 'mean': 0.19033746054867687, 'std': 0.5417883234290308, 'min': 0.0, '25%': 0.0, '50%': 0.0, '75%': 0.0, 'max': 6.0}
-
-**Shape:** Dominated by 0 (no previous contacts), with a small portion of 1 or 2, and very few above 2.
-
-**Implication:** Most customers did not have contacts in earlier campaigns.
-
----
-
-### **Employment variation rate**
-
-![Age](output/num_emp.var.rate_distribution.png "Emp.var.rate")
-
-**Descriptive Statistics for emp.var.rate:**
-{'count': 4119.0, 'mean': 0.08497208060208788, 'std': 1.5631144559116763, 'min': -3.4, '25%': -1.8, '50%': 1.1, '75%': 1.4, 'max': 1.4}
-
-**Shape:** Shows distinct peaks around −2 and +1.4, indicating certain economic conditions were more common in the data.
-
-**Implication:** Economic circumstances varied but often clustered around these two states.
-
----
-
-### **Consumer price index**
-
-![Age](output/num_cons.price.idx_distribution.png "Cons.price.idx")
-
-**Descriptive Statistics for cons.price.idx:**
-{'count': 4119.0, 'mean': 93.57970429715951, 'std': 0.5793488049889662, 'min': 92.201, '25%': 93.075, '50%': 93.749, '75%': 93.994, 'max': 94.767}
-
-**Shape:** Multiple peaks between ~92.5 and 94.5, reflecting different “clusters” of consumer price index values over time.
-
-**Implication:** The CPI shifted in steps, possibly tied to different periods in the dataset.
-
----
-
-### **Consumer confidence index**
-
-![Age](output/num_cons.conf.idx_distribution.png "Cons.conf.idx")
-
-**Descriptive Statistics for cons.conf.idx:**
-{'count': 4119.0, 'mean': -40.49910172371935, 'std': 4.594577506837543, 'min': -50.8, '25%': -42.7, '50%': -41.8, '75%': -36.4, 'max': -26.9}
-
-**Shape:** Multiple peaks roughly between −50 and −35, showing a few dominant confidence levels.
-
-**Implication:** Consumer confidence was generally negative, fluctuating within a limited range.
-
----
-
-### **Euribor 3-month rate**
-
-![Age](output/num_euribor3m_distribution.png "Euribor3m")
-
-**Descriptive Statistics for eurobor3m:**
-{'count': 4119.0, 'mean': 3.621355668851663, 'std': 1.7335912227013557, 'min': 0.635, '25%': 1.334, '50%': 4.857, '75%': 4.961, 'max': 5.045}
-
-**Shape:** Two main clusters—one around ~1 and another near ~5—indicating interest rates were either quite low or relatively high, with a “gap” in the middle.
-
-**Implication:** Distinct macroeconomic environments during the observed periods.
-
----
-
-### **Number of employees**
-
-![Age](output/num_nr.employed_distribution.png "Euribor3m")
-
-**Descriptive Statistics for nr.employed:**
-{'count': 4119.0, 'mean': 5166.481694586065, 'std': 73.66790355721253, 'min': 4963.6, '25%': 5099.1, '50%': 5191.0, '75%': 5228.1, 'max': 5228.1}
-
-**Shape:** Bimodal, with large peaks around ~5100 and ~5200, and smaller peaks under 5000.
-
-**Implication:** Employment figures changed sharply over time, suggesting different labor-market conditions across the dataset.
 
 ---
 
