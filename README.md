@@ -15,7 +15,7 @@ Utilize SVM for best performance or Decision Tree for speed with minimal perform
 
 While SVM is the champion, it’s also the slowest. Running the code on the larger version of the dataset was canceled after over 12 hours of processing and would require distributed training or more computational resources to complete.
 
-Key Featues
+Key Features
 
 **Data Description**
 ---
@@ -89,8 +89,6 @@ The pipeline involves data cleaning, exploratory data analysis (EDA), various cl
 
 **Implication:** The population skews younger to middle-aged, but there are still some older customers in the dataset.
 
----
-
 ### **Last contact duration in seconds**
 
 ![Age](output/num_duration_distribution.png "Duration")
@@ -101,8 +99,6 @@ The pipeline involves data cleaning, exploratory data analysis (EDA), various cl
 **Shape:** Strongly right-skewed, with a large majority of call durations under ~500 seconds and a very long tail of longer calls.
 
 **Implication:** Most calls are relatively short, but a small number can last much longer.
-
----
 
 ### **Correlation Matrix**
 
@@ -124,8 +120,43 @@ The pipeline involves data cleaning, exploratory data analysis (EDA), various cl
 
 **Implication:** This imbalanced class distribution may require special techniques (e.g., class weighting, oversampling, or undersampling) to train fair and robust models. Simply predicting “no” for everyone would achieve ~89% accuracy, so more nuanced methods are needed to improve predictions for the minority (“yes”) class.
 
+## **Categorical Features**
 
+### **Job versus Target**
 
+![Job](output/relationship_job_target.png "Job")
+
+**Overall:** Most customers in each job category choose “no,” reflecting the dataset’s general imbalance.
+
+**High Counts:** Blue-collar and admin. jobs appear most common, but both also have relatively fewer “yes” conversions proportionally.
+
+**Smaller Categories:** Retired and student groups, though smaller, seem to have a notable fraction of “yes,” suggesting these groups might be more receptive.
+
+**Implication:** Different occupations show varying interest levels in term deposits; certain smaller groups (like retirees) might convert at higher rates despite lower overall counts.
+
+### **Housing versus Target**
+
+![Housing](output/relationship_housing_target.png "Housing")
+
+**Housing “yes”:** Most customers with a “yes” for housing also say “no” to the product, but a moderate segment does say “yes.”
+
+**Housing “no”:** Slightly fewer overall customers than “yes” for housing, but there’s still a substantial number of “no” responses.
+
+**Unknown:** Very small group; may need imputation or separate analysis.
+
+**Implication:** Having a housing loan does not strictly prevent or guarantee interest in term deposits, but there could be subtle differences in conversion rates between those who have (or don’t have) housing loans.
+
+### Loan versus Target
+
+![Loan](output/relationship_loan_target.png "Loan")
+
+**Loan “no”:** This is the largest group; though many are “no” to the product, it also contains a meaningful fraction of “yes.”
+
+**Loan “yes”:** Fewer total observations, but similarly skewed toward “no.”
+
+**Unknown:** Minimal count, potentially “unknown” or missing data on personal loans.
+
+**Implication:** Whether someone has a personal loan does not appear as decisive as the housing category, but still might combine with other factors (income, age, job) to influence deposit subscriptions.
 
 ---
 
