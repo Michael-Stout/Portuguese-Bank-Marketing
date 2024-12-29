@@ -65,12 +65,8 @@ The pipeline involves data cleaning, exploratory data analysis (EDA), various cl
 **Numerical Stats**:
 * 	Average age is ~40, ranging 18–88.
 * 	duration (excluded for real modeling) was originally up to ~3,600 seconds.
-* 	euribor3m & emp.var.rate strongly correlate with economic conditions.
+* 	euribor3m & emp.var.rate strongly correlates with economic conditions.
 
-**Categorical Distributions**:
-* 	“admin.” job is largest (24.57%), “blue-collar” next (21.46%).
-* 	“married” is the largest marital category (60.91%), with ~0.27% missing.
-  
 **Target Variable**: For the raw data, ~11% “yes” to term deposit vs. ~89% “no”, but an upsampling approach balanced classes to 50/50 in the training set.
 
 **Summary of Notable Distributions**
@@ -82,13 +78,9 @@ The pipeline involves data cleaning, exploratory data analysis (EDA), various cl
 
 **Visualization**
 
-
-
-
 ## **Numerical Features**
 
-
-### **Age of the customer**
+## **Age of the customer**
 
 ![Age](output/num_age_distribution.png "Age")
 
@@ -113,6 +105,17 @@ The pipeline involves data cleaning, exploratory data analysis (EDA), various cl
 **Implication:** Most calls are relatively short, but a small number can last much longer.
 
 ---
+
+### **Target Variable**
+
+![Class Distribution](output/class_distribution.png "lass Distribution")
+
+**Bar Chart:** Visualizes the raw counts of customers who did not subscribe (no) versus those who did subscribe (yes) to a term deposit. Here, around 3,668 records (89.05%) are labeled “no,” while 451 records (10.95%) are labeled “yes.”
+
+**Pie Chart:** Shows the same data as percentages, highlighting a class imbalance in the target variable—about 11% of customers ended up subscribing, whereas nearly 89% did not.
+
+**Implication:** This imbalanced class distribution may require special techniques (e.g., class weighting, oversampling, or undersampling) to train fair and robust models. Simply predicting “no” for everyone would achieve ~89% accuracy, so more nuanced methods are needed to improve predictions for the minority (“yes”) class.
+
 
 ### **Number of contacts performed during this campaign**
 
