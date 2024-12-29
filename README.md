@@ -181,8 +181,9 @@ The pipeline involves data cleaning, exploratory data analysis (EDA), various cl
 	* 	“married” is the largest marital category (60.91%), with ~0.27% missing.
 	* 	**Target Variable**: For the raw data, ~11% “yes” to term deposit vs. ~89% “no”, but an upsampling approach balanced classes to 50/50 in the training set.
 
-Visualizations
-Age
+**Numerical Statistics**
+
+![Age](output/num_age_distribution.png "Age")
 
 Descriptive Statistics for age:
 {'count': 4119.0, 'mean': 40.11361981063365, 'std': 10.313361547199813, 'min': 18.0, '25%': 32.0, '50%': 38.0, '75%': 47.0, 'max': 88.0}
