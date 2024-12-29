@@ -13,10 +13,10 @@ This project focuses on developing and assessing predictive models to enhance cu
 **Logistic Regression**: 74.66% accuracy, stable and interpretable, but lags behind tree/kernel-based models.
 
 ## **Recommendation**
----
+
 Utilize SVM for best performance or Decision Tree for speed with minimal performance drop.
 
-While SVM is the champion, it’s also the slowest. Running the code on the larger version of the dataset was cancelled after over 12 hours of processing and would require distributed training or more computational resources to complete.
+While SVM is the champion, it’s also the slowest. Running the code on the larger version of the dataset was canceled after over 12 hours of processing and would require distributed training or more computational resources to complete.
 
 ---
 
