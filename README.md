@@ -10,17 +10,7 @@ This project focuses on developing and assessing predictive models to enhance cu
 
 The dataset contains both numerical and categorical features that reflect important aspects of customer behavior.
 
-### Numerical Features
-	•	age: Age of the customer
-	•	duration: Last contact duration in seconds
-	•	campaign: Number of contacts performed during this campaign
-	•	pdays: Number of days since the client was last contacted
-	•	previous: Number of contacts performed before this campaign
-	•	emp.var.rate: Employment variation rate
-	•	cons.price.idx: Consumer price index
-	•	cons.conf.idx: Consumer confidence index
-	•	euribor3m: Euribor 3-month rate
-	•	nr.employed: Number of employees
+
 
 ### Categorical Features
 	•	job: Type of job
@@ -149,12 +139,25 @@ In this analysis, I explore how to predict potential subscriptions to a long-ter
 The pipeline involves data cleaning, exploratory data analysis (EDA), various classification models, and hyperparameter tuning.
 
 **Data Description**
-	* 	**Shape**: (4119, 21)
-	* 	**Null Values**: 1230 missing entries
-	* 	**Column Data Types**:
-	* 	11 object (categorical)
-	* 	5 int64 (integer)
-	* 	5 float64 (numeric/floating)
+**Shape**: (4119, 21)
+**Null Values**: 1230 missing entries
+**Column Data Types**:
+11 object (categorical)
+5 int64 (integer)
+5 float64 (numeric/floating)
+
+
+### Numerical Features
+	•	age: Age of the customer
+	•	duration: Last contact duration in seconds
+	•	campaign: Number of contacts performed during this campaign
+	•	pdays: Number of days since the client was last contacted
+	•	previous: Number of contacts performed before this campaign
+	•	emp.var.rate: Employment variation rate
+	•	cons.price.idx: Consumer price index
+	•	cons.conf.idx: Consumer confidence index
+	•	euribor3m: Euribor 3-month rate
+	•	nr.employed: Number of employees
 
 **Key Numerical Features**:
 	* 	age, campaign, pdays, previous, emp.var.rate, cons.price.idx, cons.conf.idx, euribor3m, nr.employed, etc.
@@ -181,11 +184,16 @@ The pipeline involves data cleaning, exploratory data analysis (EDA), various cl
 	* 	“married” is the largest marital category (60.91%), with ~0.27% missing.
 	* 	**Target Variable**: For the raw data, ~11% “yes” to term deposit vs. ~89% “no”, but an upsampling approach balanced classes to 50/50 in the training set.
 
-**Numerical Statistics**
+
+
+
+
+## **Numerical Features**
+
+
+### **Age of the customer**
 
 ![Age](output/num_age_distribution.png "Age")
-
-**Age of the customer**
 
 **Descriptive Statistics for age:**
 {'count': 4119.0, 'mean': 40.11361981063365, 'std': 10.313361547199813, 'min': 18.0, '25%': 32.0, '50%': 38.0, '75%': 47.0, 'max': 88.0}
@@ -194,85 +202,112 @@ The pipeline involves data cleaning, exploratory data analysis (EDA), various cl
 
 **Implication:** The population skews younger to middle-aged, but there are still some older customers in the dataset.
 
-Duration
+
+### **Last contact duration in seconds**
 
 ![Age](output/num_duration_distribution.png "Duration")
 
-Descriptive Statistics for duration:
+**Descriptive Statistics for duration:**
 {'count': 4119.0, 'mean': 256.7880553532411, 'std': 254.70373612073678, 'min': 0.0, '25%': 
-Shape: Strongly right-skewed, with a large majority of call durations under ~500 seconds and a very long tail of longer calls.
-Implication: Most calls are relatively short, but a small number can last much longer.
 
-Campaign
+**Shape:** Strongly right-skewed, with a large majority of call durations under ~500 seconds and a very long tail of longer calls.
+
+**Implication:** Most calls are relatively short, but a small number can last much longer.
+
+
+### **Number of contacts performed during this campaign**
 
 ![Age](output/num_campaign_distribution.png "Campaign")
 
-Descriptive Statistics for campaign:
+**Descriptive Statistics for campaign:**
 {'count': 4119.0, 'mean': 2.537266326778344, 'std': 2.568159237578138, 'min': 1.0, '25%': 1.0, '50%': 2.0, '75%': 3.0, 'max': 35.0}
-Shape: Heavily right-skewed, with most clients contacted fewer than ~5 times, and a small fraction contacted many more times.
-Implication: The typical client receives a limited number of calls, but some clients have been contacted very frequently.
 
-Pdays
+**Shape:** Heavily right-skewed, with most clients contacted fewer than ~5 times, and a small fraction contacted many more times.
+
+**Implication:** The typical client receives a limited number of calls, but some clients have been contacted very frequently.
+
+
+### **Number of days since the client was last contacted**
 
 ![Age](output/num_pdays_distribution.png "Pdays")
 
-Descriptive Statistics for pdays:
+**Descriptive Statistics for pdays:**
 {'count': 4119.0, 'mean': 960.4221898519058, 'std': 191.92278580077644, 'min': 0.0, '25%': 999.0, '50%': 999.0, '75%': 999.0, 'max': 999.0}
-Shape: Nearly all values are around 999, indicating most clients had not been previously contacted or had a large gap since last contact. A small portion has pdays near zero or other small numbers.
-Implication: The majority are “new” contacts for this campaign (or far removed from past campaigns).
 
-Previous
+**Shape:** Nearly all values are around 999, indicating most clients had not been previously contacted or had a large gap since last contact. A small portion has pdays near zero or other small numbers.
+
+**Implication:** The majority are “new” contacts for this campaign (or far removed from past campaigns).
+
+
+### **Number of contacts performed before this campaign**
 
 ![Age](output/num_previous_distribution.png "Previous")
 
-Descriptive Statistics for previous:
+**Descriptive Statistics for previous:**
 {'count': 4119.0, 'mean': 0.19033746054867687, 'std': 0.5417883234290308, 'min': 0.0, '25%': 0.0, '50%': 0.0, '75%': 0.0, 'max': 6.0}
-Shape: Dominated by 0 (no previous contacts), with a small portion of 1 or 2, and very few above 2.
-Implication: Most customers did not have contacts in earlier campaigns.
 
-Emp.var.rate
+**Shape:** Dominated by 0 (no previous contacts), with a small portion of 1 or 2, and very few above 2.
+
+**Implication:** Most customers did not have contacts in earlier campaigns.
+
+
+### **Employment variation rate**
 
 ![Age](output/num_emp.var.rate_distribution.png "Emp.var.rate")
 
-Descriptive Statistics for emp.var.rate:
+**Descriptive Statistics for emp.var.rate:**
 {'count': 4119.0, 'mean': 0.08497208060208788, 'std': 1.5631144559116763, 'min': -3.4, '25%': -1.8, '50%': 1.1, '75%': 1.4, 'max': 1.4}
-Shape: Shows distinct peaks around −2 and +1.4, indicating certain economic conditions were more common in the data.
-Implication: Economic circumstances varied but often clustered around these two states.
 
-Cons.price.idx
+**Shape:** Shows distinct peaks around −2 and +1.4, indicating certain economic conditions were more common in the data.
 
-![Age](output/num_cons.price.idx "Cons.price.idx")
+**Implication:** Economic circumstances varied but often clustered around these two states.
 
-Descriptive Statistics for cons.price.idx:
+
+### **Consumer price index**
+
+![Age](output/num_cons.price.idx_distribution.idx "Cons.price.idx")
+
+**Descriptive Statistics for cons.price.idx:**
 {'count': 4119.0, 'mean': 93.57970429715951, 'std': 0.5793488049889662, 'min': 92.201, '25%': 93.075, '50%': 93.749, '75%': 93.994, 'max': 94.767}
-Shape: Multiple peaks between ~92.5 and 94.5, reflecting different “clusters” of consumer price index values over time.
-Implication: The CPI shifted in steps, possibly tied to different periods in the dataset.
 
-Cons.conf.idx
+**Shape:** Multiple peaks between ~92.5 and 94.5, reflecting different “clusters” of consumer price index values over time.
 
-![Age](output/num_cons.conf.idx "Cons.conf.idx")
+**Implication:** The CPI shifted in steps, possibly tied to different periods in the dataset.
 
-Descriptive Statistics for cons.conf.idx:
+
+### **Consumer confidence index**
+
+![Age](output/num_cons.conf.idx_distribution.png "Cons.conf.idx")
+
+**Descriptive Statistics for cons.conf.idx:**
 {'count': 4119.0, 'mean': -40.49910172371935, 'std': 4.594577506837543, 'min': -50.8, '25%': -42.7, '50%': -41.8, '75%': -36.4, 'max': -26.9}
-Shape: Multiple peaks roughly between −50 and −35, showing a few dominant confidence levels.
-Implication: Consumer confidence was generally negative, fluctuating within a limited range.
 
-Euribor3m
+**Shape:** Multiple peaks roughly between −50 and −35, showing a few dominant confidence levels.
+
+**Implication:** Consumer confidence was generally negative, fluctuating within a limited range.
+
+
+### **Euribor 3-month rate**
 
 ![Age](output/num_euribor3m_distribution.png "Euribor3m")
 
+**Descriptive Statistics for eurobor3m:**
 {'count': 4119.0, 'mean': 3.621355668851663, 'std': 1.7335912227013557, 'min': 0.635, '25%': 1.334, '50%': 4.857, '75%': 4.961, 'max': 5.045}
-Shape: Two main clusters—one around ~1 and another near ~5—indicating interest rates were either quite low or relatively high, with a “gap” in the middle.
-Implication: Distinct macroeconomic environments during the observed periods.
 
-Nr.employed
+**Shape:** Two main clusters—one around ~1 and another near ~5—indicating interest rates were either quite low or relatively high, with a “gap” in the middle.
 
-![Age](output/num_nr.employed_distribution.png "Nr.employed")
+**Implication:** Distinct macroeconomic environments during the observed periods.
 
-Descriptive Statistics for nr.employed:
+
+### **Number of employees**
+
+**Descriptive Statistics for nr.employed:**
 {'count': 4119.0, 'mean': 5166.481694586065, 'std': 73.66790355721253, 'min': 4963.6, '25%': 5099.1, '50%': 5191.0, '75%': 5228.1, 'max': 5228.1}
-Shape: Bimodal, with large peaks around ~5100 and ~5200, and smaller peaks under 5000.
-Implication: Employment figures changed sharply over time, suggesting different labor-market conditions across the dataset.
+
+**Shape:** Bimodal, with large peaks around ~5100 and ~5200, and smaller peaks under 5000.
+
+**Implication:** Employment figures changed sharply over time, suggesting different labor-market conditions across the dataset.
+---
 
 **Modeling Approaches**
 ---
