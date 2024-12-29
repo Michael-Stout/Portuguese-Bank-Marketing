@@ -1,4 +1,4 @@
-### **Executive Summary**
+**Executive Summary**
 ---
 This project focuses on developing and assessing predictive models to enhance customer subscription rates for long-term deposit products in a marketing campaign. The process includes data preprocessing, exploratory data analysis (EDA), model training, and performance evaluation.
 
