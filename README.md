@@ -41,16 +41,16 @@ The pipeline involves data cleaning, exploratory data analysis (EDA), various cl
 10. nr.employed: Number of employees
 
 **Categorical Features**:
-1. job
-2. marital
-3. education
-4. default
-5. housing
-6. loan
-7. contact
-8. month
-9. day_of_week
-10. poutcome
+1. job: Type of job
+2. marital: Marital status
+3. education: Education level
+4. default: Has credit in default?
+5. housing: Has housing loan?
+6. loan: Has personal loan?
+7. contact: Type of communication contact
+8. month: Last contact month
+9. day_of_week: Last contact day of the week
+10. poutcome: Outcome of the previous marketing campaign
 
 **Summary of Notable Distributions**
 	* 	**job**: ~24.57% admin., 21.46% blue-collar, 16.78% technician, etc.
