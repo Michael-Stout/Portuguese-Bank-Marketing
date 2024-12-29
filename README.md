@@ -29,16 +29,16 @@ The pipeline involves data cleaning, exploratory data analysis (EDA), various cl
    	- 5 float64 (numeric/floating)
 
 **Numerical Features**
-	age: Age of the customer
-	duration: Last contact duration in seconds
-	campaign: Number of contacts performed during this campaign	
-	pdays: Number of days since the client was last contacted
-	previous: Number of contacts performed before this campaign
-	emp.var.rate: Employment variation rate
-	cons.price.idx: Consumer price index
-	cons.conf.idx: Consumer confidence index
-	euribor3m: Euribor 3-month rate
-	nr.employed: Number of employees
+1. age: Age of the customer
+2. duration: Last contact duration in seconds
+3. campaign: Number of contacts performed during this campaign	
+4. pdays: Number of days since the client was last contacted
+5. previous: Number of contacts performed before this campaign
+6. emp.var.rate: Employment variation rate
+7. cons.price.idx: Consumer price index
+8. cons.conf.idx: Consumer confidence index
+9. euribor3m: Euribor 3-month rate
+10. nr.employed: Number of employees
 
 **Key Numerical Features**:
 	* 	age, campaign, pdays, previous, emp.var.rate, cons.price.idx, cons.conf.idx, euribor3m, nr.employed, etc.
