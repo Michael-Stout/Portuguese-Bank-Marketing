@@ -24,22 +24,21 @@ The pipeline involves data cleaning, exploratory data analysis (EDA), various cl
 - **Shape**: (4119, 21)
 - **Null Values**: 1230 missing entries
 - **Column Data Types**:
-- - 11 object (categorical)
-- - 5 int64 (integer)
-- - 5 float64 (numeric/floating)
+	- 11 object (categorical)
+	- 5 int64 (integer)
+   	- 5 float64 (numeric/floating)
 
-
-### Numerical Features
-	•	age: Age of the customer
-	•	duration: Last contact duration in seconds
-	•	campaign: Number of contacts performed during this campaign
-	•	pdays: Number of days since the client was last contacted
-	•	previous: Number of contacts performed before this campaign
-	•	emp.var.rate: Employment variation rate
-	•	cons.price.idx: Consumer price index
-	•	cons.conf.idx: Consumer confidence index
-	•	euribor3m: Euribor 3-month rate
-	•	nr.employed: Number of employees
+**Numerical Features**
+age: Age of the customer
+duration: Last contact duration in seconds
+campaign: Number of contacts performed during this campaign
+pdays: Number of days since the client was last contacted
+previous: Number of contacts performed before this campaign
+emp.var.rate: Employment variation rate
+cons.price.idx: Consumer price index
+cons.conf.idx: Consumer confidence index
+euribor3m: Euribor 3-month rate
+nr.employed: Number of employees
 
 **Key Numerical Features**:
 	* 	age, campaign, pdays, previous, emp.var.rate, cons.price.idx, cons.conf.idx, euribor3m, nr.employed, etc.
