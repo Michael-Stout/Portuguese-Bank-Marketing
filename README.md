@@ -7,15 +7,20 @@ This project focuses on developing and assessing predictive models to enhance cu
 **Data**: 4,119 examples, 21 features, 1,230 missing entries.
 
 **Best Model**: Tuned SVM with 98.77% test accuracy and 0.9973 ROC AUC.
+
 **Decision Tree**: Second place (94.55%), very fast but prone to overfitting.
+
 **KNN**: 90.94% test accuracy, also near-perfect fit on training.
+
 **Logistic Regression**: 74.66% accuracy, stable and interpretable, but lags behind tree/kernel-based models.
 
-**Recommendation**
+## **Recommendation**
 ---
-Utilize SVM for best performance, or Decision Tree for speed with minimal performance drop.
+Utilize SVM for best performance or Decision Tree for speed with minimal performance drop.
 
 While SVM is the champion, it’s also the slowest. Running the code on the larger version of the dataset was cancelled after over 12 hours of processing and would require distributed training or more computational resources to complete.
+
+---
 
 **Overview**
 ---
