@@ -2,15 +2,11 @@
 ---
 This project focuses on developing and assessing predictive models to enhance customer subscription rates for long-term deposit products in a marketing campaign. The process includes data preprocessing, exploratory data analysis (EDA), model training, and performance evaluation.
 
-**Data**: 4,119 examples, 21 features, 1,230 missing entries.
-
-**Best Model**: Tuned SVM with 98.77% test accuracy and 0.9973 ROC AUC.
-
-**Decision Tree**: Second place (94.55%), very fast but prone to overfitting.
-
-**KNN**: 90.94% test accuracy, also near-perfect fit on training.
-
-**Logistic Regression**: 74.66% accuracy, stable and interpretable, but lags behind tree/kernel-based models.
+- **Data**: 4,119 examples, 21 features, 1,230 missing entries.
+- **Best Model**: Tuned SVM with 98.77% test accuracy and 0.9973 ROC AUC.
+- **Decision Tree**: Second place (94.55%), very fast but prone to overfitting.
+- **KNN**: 90.94% test accuracy, also near-perfect fit on training.
+- **Logistic Regression**: 74.66% accuracy, stable and interpretable, but lags behind tree/kernel-based models.
 
 **Recommendation**
 
