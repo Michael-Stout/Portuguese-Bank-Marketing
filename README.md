@@ -14,17 +14,16 @@ Utilize SVM for best performance or Decision Tree for speed with minimal perform
 
 While SVM is the champion, it’s also the slowest. Running the code on the larger version of the dataset was canceled after over 12 hours of processing and would require distributed training or more computational resources to complete.
 
-
 **Overview**
 ---
-In this analysis, I explore how to predict potential subscriptions to a long-term deposit product using new data (4,119 records, 21 columns) from a Portuguese bank marketing campaign. I chose the smaller dataset as there weren’t significant changes to the training ac**ANALYSIS COMPARISON**
+In this analysis, I explore how to predict potential subscriptions to a long-term deposit product using data from a Portuguese bank marketing campaign.
 
 The pipeline involves data cleaning, exploratory data analysis (EDA), various classification models, and hyperparameter tuning.
 
 **Data Description**
-**Shape**: (4119, 21)
-**Null Values**: 1230 missing entries
-**Column Data Types**:
+- **Shape**: (4119, 21)
+- **Null Values**: 1230 missing entries
+- **Column Data Types**:
 11 object (categorical)
 5 int64 (integer)
 5 float64 (numeric/floating)
