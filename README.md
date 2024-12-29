@@ -205,7 +205,7 @@ Implication: Most calls are relatively short, but a small number can last much l
 
 Campaign
 
-![Age](output/output/num_campaign_distribution.png "Campaign")
+![Age](output/num_campaign_distribution.png "Campaign")
 
 Descriptive Statistics for campaign:
 {'count': 4119.0, 'mean': 2.537266326778344, 'std': 2.568159237578138, 'min': 1.0, '25%': 1.0, '50%': 2.0, '75%': 3.0, 'max': 35.0}
@@ -214,7 +214,7 @@ Implication: The typical client receives a limited number of calls, but some cli
 
 Pdays
 
-![Age](output/num_pdays_distribution.pngg "Pdays")
+![Age](output/num_pdays_distribution.png "Pdays")
 
 Descriptive Statistics for pdays:
 {'count': 4119.0, 'mean': 960.4221898519058, 'std': 191.92278580077644, 'min': 0.0, '25%': 999.0, '50%': 999.0, '75%': 999.0, 'max': 999.0}
@@ -241,7 +241,7 @@ Implication: Economic circumstances varied but often clustered around these two 
 
 Cons.price.idx
 
-![Age](output/num_cons.price.idx_distribution.pngg "Cons.price.idx")
+![Age](output/num_cons.price.idx "Cons.price.idx")
 
 Descriptive Statistics for cons.price.idx:
 {'count': 4119.0, 'mean': 93.57970429715951, 'std': 0.5793488049889662, 'min': 92.201, '25%': 93.075, '50%': 93.749, '75%': 93.994, 'max': 94.767}
@@ -250,7 +250,7 @@ Implication: The CPI shifted in steps, possibly tied to different periods in the
 
 Cons.conf.idx
 
-![Age](output/num_cons.conf.idx_distribution.png "Cons.conf.idx")
+![Age](output/num_cons.conf.idx "Cons.conf.idx")
 
 Descriptive Statistics for cons.conf.idx:
 {'count': 4119.0, 'mean': -40.49910172371935, 'std': 4.594577506837543, 'min': -50.8, '25%': -42.7, '50%': -41.8, '75%': -36.4, 'max': -26.9}
