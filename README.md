@@ -24,9 +24,9 @@ The pipeline involves data cleaning, exploratory data analysis (EDA), various cl
 - **Shape**: (4119, 21)
 - **Null Values**: 1230 missing entries
 - **Column Data Types**:
-11 object (categorical)
-5 int64 (integer)
-5 float64 (numeric/floating)
+- - 11 object (categorical)
+- - 5 int64 (integer)
+- - 5 float64 (numeric/floating)
 
 
 ### Numerical Features
