@@ -75,6 +75,9 @@ The pipeline involves data cleaning, exploratory data analysis (EDA), various cl
 * 	**loan**: ~81.31% no, ~16.14% yes, ~2.55% missing
   
 **Supporting Visualization and Stats**
+![All Plots](output "Plots")
+output
+
 
 ## **Numerical Features**
 
@@ -158,28 +161,28 @@ The pipeline involves data cleaning, exploratory data analysis (EDA), various cl
 
 **Implication:** Whether someone has a personal loan does not appear as decisive as the housing category, but still might combine with other factors (income, age, job) to influence deposit subscriptions.
 
----
-
 ## **Modeling Approaches**
 ---
 
 I used **four classifiers**:
-	1.	**Logistic Regression**
-	2.	**Decision Tree**
-	3.	**K-Nearest Neighbors (KNN)**
-	4.	**Support Vector Machine (SVM)**
+1.	**Logistic Regression**
+2.	**Decision Tree**
+3.	**K-Nearest Neighbors (KNN)**
+4.	**Support Vector Machine (SVM)**
 
 **Imbalanced Data**
 Before training, I upsampled the minority class to handle the imbalance. Then I split data (80/20) into train/test sets.
 
 **Evaluation Metrics**
-	* 	Accuracy
-	* 	ROC AUC
-	* 	Precision, Recall, F1 (seen in classification reports)
+* 	Accuracy
+* 	ROC AUC
+* 	Precision, Recall, F1 (seen in classification reports)
 
 **Default Results**
----
-I obtained the follwing results using the default settings for the models.
+
+I obtained the following results using the default settings for the models.
+
+
 
 **Key Observations**:
 	* 	**Decision Tree** is extremely accurate on training (99.97%) and very strong on test (94.55%), indicating some overfitting.
