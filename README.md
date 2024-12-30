@@ -161,16 +161,15 @@ You may view all visualizations for your own analysis [here.](/output "All Plots
 **Implication:** Whether someone has a personal loan does not appear as decisive as the housing category, but still might combine with other factors (income, age, job) to influence deposit subscriptions.
 
 ## **Modeling Approaches**
----
 
-I used **four classifiers**:
+I used four classifiers:
 1.	**Logistic Regression**
 2.	**Decision Tree**
 3.	**K-Nearest Neighbors (KNN)**
 4.	**Support Vector Machine (SVM)**
 
 **Imbalanced Data**
-Before training, I upsampled the minority class to handle the imbalance. Then I split data (80/20) into train/test sets.
+Before training, I upsampled the minority class to handle the imbalance. Then, I split data (80/20) into train/test sets.
 
 **Evaluation Metrics**
 * 	Accuracy
@@ -181,22 +180,29 @@ Before training, I upsampled the minority class to handle the imbalance. Then I 
 
 I obtained the following results using the default settings for the models.
 
+Here's the data converted to a markdown table:
 
+| Model               | Train Time (s) | Train Acc | Test Acc | Precision | Recall | F1 Score |
+|---------------------|----------------|-----------|----------|-----------|---------|-----------|
+| Logistic Regression | 0.26           | 0.7384    | 0.7466   | 0.8187    | 0.6335  | 0.7143    |
+| Decision Tree       | 0.02           | 0.9997    | 0.9455   | 0.9017    | 1.0000  | 0.9483    |
+| KNN                 | 0.00           | 0.9008    | 0.8590   | 0.7912    | 0.9755  | 0.8737    |
+| SVM                 | 2.19           | 0.8062    | 0.7963   | 0.8560    | 0.7125  | 0.7777    |
 
 **Key Observations**:
-	* 	**Decision Tree** is extremely accurate on training (99.97%) and very strong on test (94.55%), indicating some overfitting.
-	* 	**KNN** also shows high train accuracy (90.08%) but drops to 85.90% on test.
-	* 	**Logistic Regression** is more balanced, ~74.66% test accuracy, with a moderate ROC AUC (~0.7966).
-	* 	**SVM** with default hyperparameters underperforms the Decision Tree and KNN in test accuracy (79.63%).
+* 	**Decision Tree** is extremely accurate on training (99.97%) and very strong on test (94.55%), indicating some overfitting.
+* 	**KNN** also shows high train accuracy (90.08%) but drops to 85.90% on the test.
+* 	**Logistic Regression** is more balanced, with ~74.66% test accuracy and a moderate ROC AUC (~0.7966).
+* 	**SVM** with default hyperparameters underperforms the Decision Tree and KNN in test accuracy (79.63%).
 
-**6. Hyperparameter Tuning Resultes**
+**6. Hyperparameter Tuning Results**
 The following results were achieved after hyperparameter tuning.
 
 **Findings**:
-	* 	**SVM** soared after tuning, reaching **98.77%** test accuracy and **0.9973 ROC AUC**, the best overall.
-	* 	**Decision Tree** remains second at **94.55%** test accuracy.
-	* 	**KNN** improved to **90.94%** test accuracy.
-	* 	**Logistic Regression** stays around **74.66%**, still stable but behind the tree-based or kernel-based methods.
+* 	**SVM** soared after tuning, reaching **98.77%** test accuracy and **0.9973 ROC AUC**, the best overall.
+* 	**Decision Tree** remains second at **94.55%** test accuracy.
+* 	**KNN** improved to **90.94%** test accuracy.
+* 	**Logistic Regression** stays around **74.66%**, still stable but behind the tree-based or kernel-based methods.
 
 **7. Insights into the New Data and Results**
 	1.	**Shape & Missingness**: With 4,119 records, the dataset is moderately sized; 1,230 nulls highlight the importance of careful imputation (especially for default, housing, loan, and some education).
