@@ -226,28 +226,9 @@ TABLE
 	5.	**KNN** also hits perfect training accuracy but dips to ~90.94% test.
 	6.	**Logistic Regression** remains the most interpretable, though with modest ~74.66% test accuracy, it might be favored for speed and transparency in certain business contexts.
 
-**Business Recommendations**
----
-	* 	**Use SVM** if maximum predictive power is desired and computation time is acceptable.
-	* 	**Watch for Overfitting** in the Decision Tree and KNN; while these show strong test performance, they can degrade if future data differs from the training set.
-	* 	**Focus on Data Quality**: 1,230 missing entries are significant; refining or collecting missing info could further improve results.
-	* 	**Leverage Economic Indicators** (emp.var.rate, euribor3m) and call features (e.g., duration) more explicitly—SVM permutations indicate these are key.
-	* 	**Iterate** with advanced feature engineering, model ensembles, or time-series analysis for additional gains.
-
-### New Report Summary
-	* 	**New Data**: 4,119 examples, 21 features, 1,230 missing entries.
-	* 	**Best Model**: Tuned SVM with 98.77% test accuracy and 0.9973 ROC AUC.
-	* 	**Decision Tree**: Second place (94.55%), very fast but prone to overfitting.
-	* 	**KNN**: 90.94% test accuracy, also near-perfect fit on training.
-	* 	**Logistic Regression**: 74.66% accuracy, stable and interpretable, but lags behind tree/kernel-based models.
-	* 	**Recommendation**: SVM for best performance or Decision Tree for speed with minimal performance drop.
-
-
-### 5. Additional Insight About the New Data
-	1.	**Null Values**: With 1,230 missing values out of 4,119 records (~30%), proper imputation or domain-driven treatment is critical to ensure robust models. A large portion of these come from placeholders like “unknown” in columns default, housing, loan, and education.
-	2.	**Stronger Economic Shifts**: The emp.var.rate has a wider range here (−3.4 to +1.4), suggesting data covering significant economic fluctuations. High variance in these indicators often boosts the value of SVM, which handles complex boundaries.
-	3.	**Improved Gains with Tuning**: The SVM’s jump from 79.63% to 98.77% test accuracy underscores how **crucial** hyperparameter tuning can be—particularly for advanced algorithms like SVM.
-	4.	**Scalability**: 
-
----
-#Module17
+**Further Work & Considerations**
+1. **Use SVM** if maximum predictive power is desired and computation time is acceptable.
+2. **Watch for Overfitting** in the Decision Tree and KNN; while these show strong test performance, they can degrade if future data differs from the training set.
+3. **Focus on Data Quality**: 1,230 missing entries are significant; refining or collecting missing info could further improve results.
+4. **Leverage Economic Indicators** (emp.var.rate, euribor3m) and call features (e.g., duration) more explicitly—SVM permutations indicate these are key.
+5. **Iterate** with advanced feature engineering, model ensembles, or time-series analysis for additional gains.
