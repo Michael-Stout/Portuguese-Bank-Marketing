@@ -65,7 +65,7 @@ The pipeline involves data cleaning, exploratory data analysis (EDA), various cl
 **Numerical Stats**:
 * 	Average age is ~40, ranging 18–88.
 * 	duration (excluded for real modeling) was originally up to ~3,600 seconds.
-* 	euribor3m & emp.var.rate strongly correlates with economic conditions.
+* 	Macro-Economic Cluster: euribor3m & emp.var.rate strongly correlates with economic conditions.
 
 **Target Variable**: For the raw data, ~11% “yes” to term deposit vs. ~89% “no,” but an upsampling approach balanced classes to 50/50 in the training set.
 
@@ -75,9 +75,8 @@ The pipeline involves data cleaning, exploratory data analysis (EDA), various cl
 * 	**loan**: ~81.31% no, ~16.14% yes, ~2.55% missing
   
 **Supporting Visualization and Stats**
-![All Plots](output/ "Plots")
-output
 
+You may view all visualizations for your own analysis [here.](/output "All Plots")
 
 ## **Numerical Features**
 
