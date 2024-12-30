@@ -187,14 +187,30 @@ I obtained the following results using the default settings for the models.
 | KNN                 | 0.00           | 0.9008    | 0.8590   | 0.7912    | 0.9755  | 0.8737    |
 | SVM                 | 2.19           | 0.8062    | 0.7963   | 0.8560    | 0.7125  | 0.7777    |
 
-**Key Observations**:
-* 	**Decision Tree** is extremely accurate on training (99.97%) and very strong on test (94.55%), indicating some overfitting.
-* 	**KNN** also shows high train accuracy (90.08%) but drops to 85.90% on the test.
-* 	**Logistic Regression** is more balanced, with ~74.66% test accuracy and a moderate ROC AUC (~0.7966).
-* 	**SVM** with default hyperparameters underperforms the Decision Tree and KNN in test accuracy (79.63%).
+**Observations**:
+1. Decision Tree Overfitting
+* It achieves a near-perfect training accuracy (99.97%) but still shows strong generalization on the test set (94.55%).
+* Its recall is a perfect 1.0, indicating it identifies all positive cases in the test set—however, this can hint that the tree is very deep or complex.
+2. KNN’s Speed vs. Performance
+* KNN trains extremely quickly (0.00s reported) yet yields a respectable test accuracy of 85.90%.
+* Its recall (0.9755) is also quite high, meaning it rarely misses positive cases, although precision is lower than other models.
+3. SVM’s Balance and Train Time
+* SVM offers a decent balance (79.63% test accuracy, 0.856 precision, 0.7125 recall), but it takes considerably longer to train (2.19s) than the other methods.
+* This might be acceptable if the additional compute time is not a bottleneck, depending on the application.
+4. Logistic Regression’s Interpretability
+* Logistic Regression is relatively fast (0.26s) with moderate train and test accuracies around ~74%.
+* Precision (0.8187) and recall (0.6335) are decent, suggesting a balanced, interpretable baseline solution.
+5. Comparative Precision and Recall
+* Decision Tree is the clear outlier, combining high precision (0.9017) and perfect recall on the test set, leading to the top F1 score (0.9483).
+* KNN has the highest recall (0.9755) but a lower precision (0.7912), reflecting more false positives.
 
-**6. Hyperparameter Tuning Results**
+Overall, the Decision Tree dominates in accuracy and recall, but the near-perfect training score suggests potential overfitting. KNN and SVM strike a more balanced compromise, while Logistic Regression remains a solid, interpretable baseline with lower computational cost.
+
+**Hyperparameter Tuning Results**
+
 The following results were achieved after hyperparameter tuning.
+
+TABLE
 
 **Findings**:
 * 	**SVM** soared after tuning, reaching **98.77%** test accuracy and **0.9973 ROC AUC**, the best overall.
