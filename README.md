@@ -180,8 +180,6 @@ Before training, I upsampled the minority class to handle the imbalance. Then, I
 
 I obtained the following results using the default settings for the models.
 
-Here's the data converted to a markdown table:
-
 | Model               | Train Time (s) | Train Acc | Test Acc | Precision | Recall | F1 Score |
 |---------------------|----------------|-----------|----------|-----------|---------|-----------|
 | Logistic Regression | 0.26           | 0.7384    | 0.7466   | 0.8187    | 0.6335  | 0.7143    |
