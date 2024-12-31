@@ -217,22 +217,17 @@ The following results were achieved after hyperparameter tuning.
 | KNN | 0.20 | 0.999659 | 0.909401 | 0.948080 | {'n_neighbors': 3, 'weights': 'distance'} |
 | SVM | 55.68 | 0.997955 | 0.987738 | 0.997275 | {'C': 10, 'gamma': 1, 'kernel': 'rbf'} |
 
-Sources
-
-
 **Findings**:
 * 	**SVM** soared after tuning, reaching **98.77%** test accuracy and **0.9973 ROC AUC**, the best overall.
 * 	**Decision Tree** remains second at **94.55%** test accuracy.
 * 	**KNN** improved to **90.94%** test accuracy.
 * 	**Logistic Regression** stays around **74.66%**, still stable but behind the tree-based or kernel-based methods.
-
-**7. Insights into the New Data and Results**
-	1.	**Shape & Missingness**: With 4,119 records, the dataset is moderately sized; 1,230 nulls highlight the importance of careful imputation (especially for default, housing, loan, and some education).
-	2.	**Class Distribution**: The raw data is heavily skewed toward “no,” but upsampling balanced the training set.
-	3.	**SVM** emerges as the best performer with near-perfect test accuracy (98.77%) and ~1.00 ROC AUC, though it requires **longer training** (over 60 seconds in tuning).
-	4.	**Decision Tree** is simpler and very fast to train, scoring around 94.55% on the test set, but it overfits drastically (nearly 100% on training).
-	5.	**KNN** also hits perfect training accuracy but dips to ~90.94% test.
-	6.	**Logistic Regression** remains the most interpretable, though with modest ~74.66% test accuracy, it might be favored for speed and transparency in certain business contexts.
+1.	**Shape & Missingness**: With 4,119 records, the dataset is moderately sized; 1,230 nulls highlight the importance of careful imputation (especially for default, housing, loan, and some education).
+2.	**Class Distribution**: The raw data is heavily skewed toward “no,” but upsampling balanced the training set.
+3.	**SVM** emerges as the best performer with near-perfect test accuracy (98.77%) and ~1.00 ROC AUC, though it requires **longer training** (over 60 seconds in tuning).
+4.	**Decision Tree** is simpler and very fast to train, scoring around 94.55% on the test set, but it overfits drastically (nearly 100% on training).
+5.	**KNN** also hits perfect training accuracy but dips to ~90.94% test.
+6.	**Logistic Regression** remains the most interpretable, though with modest ~74.66% test accuracy, it might be favored for speed and transparency in certain business contexts.
 
 **Further Work & Considerations**
 1. **Use SVM** if maximum predictive power is desired and computation time is acceptable.
