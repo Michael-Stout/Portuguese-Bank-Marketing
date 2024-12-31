@@ -210,7 +210,15 @@ Overall, the Decision Tree dominates in accuracy and recall, but the near-perfec
 
 The following results were achieved after hyperparameter tuning.
 
-TABLE
+| Model | Time (s) | Train Acc | Test Acc | ROC AUC | Best Params |
+|-------|----------|-----------|-----------|----------|-------------|
+| Logistic Regression | 8.01 | 0.739093 | 0.746594 | 0.796585 | {'C': 10, 'l1_ratio': 0.9, 'max_iter': 1000, 'penalty': 'elasticnet', 'solver': 'saga'} |
+| Decision Tree | 0.58 | 0.999659 | 0.945504 | 0.945812 | {'max_depth': None, 'min_samples_leaf': 1, 'min_samples_split': 2} |
+| KNN | 0.20 | 0.999659 | 0.909401 | 0.948080 | {'n_neighbors': 3, 'weights': 'distance'} |
+| SVM | 55.68 | 0.997955 | 0.987738 | 0.997275 | {'C': 10, 'gamma': 1, 'kernel': 'rbf'} |
+
+Sources
+
 
 **Findings**:
 * 	**SVM** soared after tuning, reaching **98.77%** test accuracy and **0.9973 ROC AUC**, the best overall.
