@@ -1,7 +1,6 @@
 **Executive Summary**
 ---
-The goal of this project is to increase long-term deposit accounts through advanced predictive analytics. I analyzed customer behavior patterns and campaign effectiveness by leveraging machine learning techniques to optimize conversion rates.
-
+This project aims to increase long-term deposit accounts through advanced predictive analytics. I analyzed customer behavior patterns and campaign effectiveness by leveraging machine-learning techniques to optimize conversion rates.
 
 - **Data**: 4,119 examples, 21 features, 1,230 missing entries.
 - **Best Model**: Tuned SVM with 98.77% test accuracy and 0.9973 ROC AUC.
@@ -15,7 +14,7 @@ Utilize SVM for best performance or Decision Tree for speed with minimal perform
 
 While SVM is the champion, it’s also the slowest. Running the code on the larger version of the dataset was canceled after over 12 hours of processing and would require distributed training or more computational resources to complete.
 
-Key Features
+Key Features of My Models
 
 **Data Description**
 ---
@@ -47,13 +46,13 @@ The pipeline involves data cleaning, exploratory data analysis (EDA), various cl
 1. job: Type of job
 2. marital: Marital status
 3. education: Education level
-4. default: Has credit in default?
-5. housing: Has housing loan?
-6. loan: Has personal loan?
+4. default: Is credit in default?
+5. housing: Has a housing loan?
+6. loan: Has a personal loan?
 7. contact: Type of communication contact
 8. month: Last contact month
 9. day_of_week: Last contact day of the week
-10. poutcome: Outcome of the previous marketing campaign
+10. poutcome: The outcome of the previous marketing campaign
 
 **Exploratory Data Analysis (EDA)**
 ---
@@ -217,17 +216,28 @@ The following results were achieved after hyperparameter tuning.
 | KNN | 0.20 | 0.999659 | 0.909401 | 0.948080 | {'n_neighbors': 3, 'weights': 'distance'} |
 | SVM | 55.68 | 0.997955 | 0.987738 | 0.997275 | {'C': 10, 'gamma': 1, 'kernel': 'rbf'} |
 
+
+
 **Findings**:
-* 	**SVM** soared after tuning, reaching **98.77%** test accuracy and **0.9973 ROC AUC**, the best overall.
-* 	**Decision Tree** remains second at **94.55%** test accuracy.
-* 	**KNN** improved to **90.94%** test accuracy.
-* 	**Logistic Regression** stays around **74.66%**, still stable but behind the tree-based or kernel-based methods.
-1.	**Shape & Missingness**: With 4,119 records, the dataset is moderately sized; 1,230 nulls highlight the importance of careful imputation (especially for default, housing, loan, and some education).
-2.	**Class Distribution**: The raw data is heavily skewed toward “no,” but upsampling balanced the training set.
-3.	**SVM** emerges as the best performer with near-perfect test accuracy (98.77%) and ~1.00 ROC AUC, though it requires **longer training** (over 60 seconds in tuning).
-4.	**Decision Tree** is simpler and very fast to train, scoring around 94.55% on the test set, but it overfits drastically (nearly 100% on training).
-5.	**KNN** also hits perfect training accuracy but dips to ~90.94% test.
-6.	**Logistic Regression** remains the most interpretable, though with modest ~74.66% test accuracy, it might be favored for speed and transparency in certain business contexts.
+
+Here's the consolidated model performance analysis:
+
+## Model Performance Summary
+
+| Model | Test Accuracy | Notable Characteristics |
+|-------|---------------|------------------------|
+| SVM | 98.77% | Best ROC AUC (0.9973), Longest training time (60+ seconds) |
+| Decision Tree | 94.55% | Fast training, Shows overfitting |
+| KNN | 90.94% | Perfect training accuracy but lower test performance |
+| Logistic Regression | 74.66% | Most interpretable, Fastest training |
+
+## Dataset Characteristics
+
+The analysis was conducted on 4,119 records with 1,230 null values, requiring careful imputation, particularly for default, housing, loan, and education fields. The original class distribution showed a significant skew toward "no" responses, addressed through upsampling in the training set.
+
+## Key Insights
+
+The Support Vector Machine (SVM) emerged as the superior model, achieving near-perfect performance despite longer training times. While the Decision Tree and KNN showed strong performance, they exhibited signs of overfitting. Though less accurate, Logistic Regression offers advantages in interpretability and training speed.
 
 **Further Work & Considerations**
 1. **Use SVM** if maximum predictive power is desired and computation time is acceptable.
