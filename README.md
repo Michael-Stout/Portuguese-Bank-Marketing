@@ -61,12 +61,12 @@ The pipeline involves data cleaning, exploratory data analysis (EDA), various cl
 - **Implication**: There is a class imbalance, so special techniques (e.g., oversampling or class weights) may be necessary.  
 
 ## **Correlation Matrix**
-![Hierarchically Clustered Correlation Matrix](output/correlation_matrix.png "Correlation Matrix")
+![Hierarchically Clustered Correlation Matrix](output/correlation_matrix_clustered.png "Correlation Matrix")
 
 **Macro-Economic Cluster**  
 - `emp.var.rate`, `euribor3m`, and `nr.employed` are all strongly positively correlated (in the 0.9+ range).  
 - `cons.price.idx` is also notably correlated with these variables (~0.76–0.97).  
-- `pdays` is inverse correlated with `previous` (-0.59).  
+- `pdays` has an inverse correlation with `previous` (-0.59).  
 
 **Implication**  
 These clusters of features often move together, reflecting broad economic conditions. Proper modeling or feature engineering may consider these interdependencies.
@@ -85,12 +85,12 @@ These clusters of features often move together, reflecting broad economic condit
 ![Housing vs. Target](output/relationship_housing_target.png "Housing vs. Target")
 
 - **Breakdown**: ~52.80% “yes” to housing loan, ~44.65% “no.”  
-- **Observation**: There is no strict relationship with deposit subscription alone, but it can still play a role in other financial indicators.
+- **Observation**: No strict relationship with deposit subscription alone, but it can still play a role in combination with other financial indicators.
 
 ### **Loan vs. Target**
 ![Loan vs. Target](output/relationship_loan_target.png "Loan vs. Target")
 
-- **Loan “no”**: Largest group; contains the most “yes” conversions by count.  
+- **Loan “no”**: Largest group; also contains the most “yes” conversions by count.  
 - **Loan “yes”**: Smaller overall but includes both “no” and “yes” to the product.
 
 ---
@@ -195,7 +195,7 @@ The **SVM** model achieved the highest accuracy (98.77%) and ROC AUC (0.9973) in
 
 ### **1. Permutation Feature Importance**
 
-![Permutation Feature Importance - SVM (Tuned)](output/feature_importance_svm_tuned.png "Permutation Feature Importance (SVM)")
+![Permutation Feature Importance - SVM (Tuned)](output/permutation_importance_SVM_Tuned.png "Permutation Feature Importance (SVM)")
 
 - **Interpretation**:  
   - The top features for SVM include `nr.employed`, `age`, `cons.conf.idx`, and `cons.price.idx`—all strong indicators of economic and demographic conditions.  
@@ -207,44 +207,44 @@ The **SVM** model achieved the highest accuracy (98.77%) and ROC AUC (0.9973) in
 Partial dependence plots illustrate how changes in a single feature affect the model’s predicted probability of a positive outcome (`y = yes`), holding all other features constant.
 
 1. **`emp.var.rate`**  
-   ![Partial Dependence for 'emp.var.rate' (SVM)](output/pdp_svm_emp.var.rate.png "emp.var.rate PDP")
+   ![Partial Dependence for 'emp.var.rate' (SVM)](output/pdp_SVM_Tuned_emp.var.rate.png "emp.var.rate PDP")
    - **Interpretation**:  
      - The model predicts higher probabilities of subscription when `emp.var.rate` is in a moderate negative range (~ -1.0 to -0.5).  
      - Very negative or very positive values reduce the predicted likelihood of a positive outcome.  
 
 2. **`nr.employed`**  
-   ![Partial Dependence for 'nr.employed' (SVM)](output/pdp_svm_nr.employed.png "nr.employed PDP")
+   ![Partial Dependence for 'nr.employed' (SVM)](output/pdp_SVM_Tuned_nr.employed.png "nr.employed PDP")
    - **Interpretation**:  
      - Slight dips in `nr.employed` around 0 to -0.5 lead to lower probabilities, while more negative or moderately positive values can push probabilities higher.  
 
 3. **`age`**  
-   ![Partial Dependence for 'age' (SVM)](output/pdp_svm_age.png "age PDP")
+   ![Partial Dependence for 'age' (SVM)](output/pdp_SVM_Tuned_age.png "age PDP")
    - **Interpretation**:  
      - Ages roughly in the mid-30s to early 40s correlate with the highest predicted probability of subscription.  
      - Probability drops off substantially for older ages.
 
 4. **`cons.conf.idx`**  
-   ![Partial Dependence for 'cons.conf.idx' (SVM)](output/pdp_svm_cons.conf.idx.png "cons.conf.idx PDP")
+   ![Partial Dependence for 'cons.conf.idx' (SVM)](output/pdp_SVM_Tuned_cons.conf.idx.png "cons.conf.idx PDP")
    - **Interpretation**:  
      - Moderate consumer confidence indexes (around 0 to 1) are linked to higher probabilities of subscription; extremes at either end reduce the likelihood.
 
 5. **`cons.price.idx`**  
-   ![Partial Dependence for 'cons.price.idx' (SVM)](output/pdp_svm_cons.price.idx.png "cons.price.idx PDP")
+   ![Partial Dependence for 'cons.price.idx' (SVM)](output/pdp_SVM_Tuned_cons.price.idx.png "cons.price.idx PDP")
    - **Interpretation**:  
-     - The plot shows a bimodal region (roughly -1.0 to -0.5 and +0.5 to +1.0) where the consumer price index correlates with higher subscription likelihood.  
+     - The plot shows a bimodal region (roughly -1.0 to -0.5 and +0.5 to +1.0) where consumer price index correlates with higher subscription likelihood.  
      - Very low or very high indices drop the predicted probability significantly.
 
 ### **3. ROC Curve**
 
-![ROC Curve for SVM (Tuned)](output/roc_svm_tuned.png "ROC Curve - SVM (Tuned)")
+![ROC Curve for SVM (Tuned)](output/roc_curve_SVM_Tuned.png "ROC Curve - SVM (Tuned)")
 
 - **Interpretation**:  
   - The nearly perfect curve indicates the model excels at distinguishing positive vs. negative classes.  
-  - **AUC = 0.9973** confirms the outstanding separability of the classes.
+  - **AUC = 0.9973** confirms outstanding separability of the classes.
 
-### **4. Precision-Recall Curve**
+### **4. Precision–Recall Curve**
 
-![Precision–Recall Curve for SVM (Tuned)](output/pr_svm_tuned.png "Precision–Recall Curve - SVM (Tuned)")
+![Precision–Recall Curve for SVM (Tuned)](output/precision_recall_SVM_Tuned.png "Precision–Recall Curve - SVM (Tuned)")
 
 - **Interpretation**:  
   - The curve remains high (>0.90 precision) over a broad range of recall values.  
