@@ -1,7 +1,24 @@
 # **Executive Summary**
 ---
-This project aims to increase long-term deposit accounts through advanced predictive analytics. I analyzed customer behavior patterns and campaign effectiveness by leveraging machine-learning techniques to optimize conversion rates.
+This project aims to increase long-term deposit accounts through advanced predictive analytics by analyzing customer behavior patterns and campaign effectiveness using machine learning techniques.
 
+## Business Objectives
+
+**Resource Optimization**
+The primary goal is to enhance telemarketing campaign efficiency by reducing unnecessary client contacts while maintaining successful outcomes. This involves minimizing phone calls and associated costs while maximizing the productive use of contact center resources.
+
+**Conversion Enhancement**
+The focus is on maintaining or improving term deposit subscription rates while optimizing resource allocation. Through predictive analytics, the bank can identify customers with a higher likelihood of subscribing to term deposits, leading to more targeted and cost-effective marketing decisions.
+
+## Expected Outcomes
+The implementation of this data-driven approach will enable:
+- More precise customer targeting
+- Reduced operational costs
+- Improved allocation of human resources
+- Enhanced campaign effectiveness
+- Higher conversion rates with fewer contact attempts
+
+This strategic initiative combines efficiency improvements with conversion optimization, ultimately aiming to transform the bank's marketing approach through intelligent resource utilization.
 - **Data**: 4,119 examples, 21 features, 1,230 missing entries.
 - **Best Model**: Tuned SVM with **98.77%** test accuracy and **0.9973** ROC AUC.
 - **Decision Tree**: Second place (**94.55%**), very fast but prone to overfitting.
