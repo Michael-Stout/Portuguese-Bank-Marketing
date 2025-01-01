@@ -1,0 +1,447 @@
+2025-01-01 19:35:17 | Analysis | INFO | Environment setup complete.
+2025-01-01 19:35:17 | Analysis | INFO | Successfully loaded marketing_data from data/bank-additional.csv
+2025-01-01 19:35:17 | Analysis | INFO | === marketing_data Dataset Information ===
+2025-01-01 19:35:17 | Analysis | INFO | Name: <- ADD NAME
+2025-01-01 19:35:17 | Analysis | INFO | Shape: (4119, 20)
+2025-01-01 19:35:17 | Analysis | INFO | Number of Null Values: 1230
+2025-01-01 19:35:17 | Analysis | INFO | Data Types:
+object     11
+float64     5
+int64       4
+Name: count, dtype: int64
+2025-01-01 19:35:17 | Analysis | INFO | === Descriptive Statistics ===   <- ADD
+2025-01-01 19:35:17 | Analysis | INFO | Descriptive Stats (mean, std, min, max):  <- OUTPUT AS MARKDOWN TABLE
+|      |     age |   campaign |   pdays |   previous |   emp.var.rate |   cons.price.idx |   cons.conf.idx |   euribor3m |   nr.employed |
+|:-----|--------:|-----------:|--------:|-----------:|---------------:|-----------------:|----------------:|------------:|--------------:|
+| mean | 40.1136 |    2.53727 | 960.422 |   0.190337 |      0.0849721 |        93.5797   |       -40.4991  |     3.62136 |     5166.48   |
+| std  | 10.3134 |    2.56816 | 191.923 |   0.541788 |      1.56311   |         0.579349 |         4.59458 |     1.73359 |       73.6679 |
+| min  | 18      |    1       |   0     |   0        |     -3.4       |        92.201    |       -50.8     |     0.635   |     4963.6    |
+| max  | 88      |   35       | 999     |   6        |      1.4       |        94.767    |       -26.9     |     5.045   |     5228.1    |
+2025-01-01 19:35:17 | Analysis | INFO | === Five Random Records ===   <- ADD
+2025-01-01 19:35:17 | Analysis | INFO | Five Random Records:
+|      |   age | job         | marital   | education   | default   | housing   | loan   | contact   | month   | day_of_week   |   campaign |   pdays |   previous | poutcome    |   emp.var.rate |   cons.price.idx |   cons.conf.idx |   euribor3m |   nr.employed | y   |
+|-----:|------:|:------------|:----------|:------------|:----------|:----------|:-------|:----------|:--------|:--------------|-----------:|--------:|-----------:|:------------|---------------:|-----------------:|----------------:|------------:|--------------:|:----|
+| 1641 |    36 | technician  | single    | high.school | no        | yes       | yes    | cellular  | aug     | tue           |          7 |     999 |          0 | nonexistent |            1.4 |           93.444 |           -36.1 |       4.963 |        5228.1 | no  |
+| 1064 |    47 | services    | divorced  | basic.4y    | no        | no        | no     | cellular  | jul     | tue           |          2 |     999 |          0 | nonexistent |            1.4 |           93.918 |           -42.7 |       4.961 |        5228.1 | no  |
+| 1077 |    47 | admin.      | married   | basic.9y    | no        | no        | no     | cellular  | nov     | thu           |          1 |     999 |          0 | nonexistent |           -0.1 |           93.2   |           -42   |       4.076 |        5195.8 | no  |
+| 3255 |    47 | housemaid   | single    | basic.4y    | no        | no        | no     | telephone | jun     | tue           |          1 |     999 |          0 | nonexistent |            1.4 |           94.465 |           -41.8 |       4.961 |        5228.1 | no  |
+| 1616 |    29 | blue-collar | single    | basic.9y    | no        | no        | yes    | cellular  | oct     | wed           |          2 |     999 |          0 | nonexistent |           -3.4 |           92.431 |           -26.9 |       0.735 |        5017.5 | yes |
+2025-01-01 19:35:17 | Analysis | INFO | Descriptive Statistics for age:
+{
+  'count':  4119.0000,
+  'mean':    40.1136,
+  'std':    10.3134,
+  'min':    18.0000,
+  '25%':    32.0000,
+  '50%':    38.0000,
+  '75%':    47.0000,
+  'max':    88.0000,
+}
+2025-01-01 19:35:17 | Analysis | INFO | Descriptive Statistics for campaign:
+{
+  'count':  4119.0000,
+  'mean':     2.5373,
+  'std':     2.5682,
+  'min':     1.0000,
+  '25%':     1.0000,
+  '50%':     2.0000,
+  '75%':     3.0000,
+  'max':    35.0000,
+}
+2025-01-01 19:35:18 | Analysis | INFO | Descriptive Statistics for pdays:
+{
+  'count':  4119.0000,
+  'mean':   960.4222,
+  'std':   191.9228,
+  'min':     0.0000,
+  '25%':   999.0000,
+  '50%':   999.0000,
+  '75%':   999.0000,
+  'max':   999.0000,
+}
+2025-01-01 19:35:18 | Analysis | INFO | Descriptive Statistics for previous:
+{
+  'count':  4119.0000,
+  'mean':     0.1903,
+  'std':     0.5418,
+  'min':     0.0000,
+  '25%':     0.0000,
+  '50%':     0.0000,
+  '75%':     0.0000,
+  'max':     6.0000,
+}
+2025-01-01 19:35:18 | Analysis | INFO | Descriptive Statistics for emp.var.rate:
+{
+  'count':  4119.0000,
+  'mean':     0.0850,
+  'std':     1.5631,
+  'min':    -3.4000,
+  '25%':    -1.8000,
+  '50%':     1.1000,
+  '75%':     1.4000,
+  'max':     1.4000,
+}
+2025-01-01 19:35:18 | Analysis | INFO | Descriptive Statistics for cons.price.idx:
+{
+  'count':  4119.0000,
+  'mean':    93.5797,
+  'std':     0.5793,
+  'min':    92.2010,
+  '25%':    93.0750,
+  '50%':    93.7490,
+  '75%':    93.9940,
+  'max':    94.7670,
+}
+2025-01-01 19:35:18 | Analysis | INFO | Descriptive Statistics for cons.conf.idx:
+{
+  'count':  4119.0000,
+  'mean':   -40.4991,
+  'std':     4.5946,
+  'min':   -50.8000,
+  '25%':   -42.7000,
+  '50%':   -41.8000,
+  '75%':   -36.4000,
+  'max':   -26.9000,
+}
+2025-01-01 19:35:18 | Analysis | INFO | Descriptive Statistics for euribor3m:
+{
+  'count':  4119.0000,
+  'mean':     3.6214,
+  'std':     1.7336,
+  'min':     0.6350,
+  '25%':     1.3340,
+  '50%':     4.8570,
+  '75%':     4.9610,
+  'max':     5.0450,
+}
+2025-01-01 19:35:18 | Analysis | INFO | Descriptive Statistics for nr.employed:
+{
+  'count':  4119.0000,
+  'mean':  5166.4817,
+  'std':    73.6679,
+  'min':  4963.6000,
+  '25%':  5099.1000,
+  '50%':  5191.0000,
+  '75%':  5228.1000,
+  'max':  5228.1000,
+}
+2025-01-01 19:35:18 | Analysis | INFO | 
+Distribution for job:
+               Count  Percentage
+job                             
+admin.          1012       24.57
+blue-collar      884       21.46
+technician       691       16.78
+services         393        9.54
+management       324        7.87
+retired          166        4.03
+self-employed    159        3.86
+entrepreneur     148        3.59
+unemployed       111        2.69
+housemaid        110        2.67
+student           82        1.99
+NaN               39        0.95
+2025-01-01 19:35:19 | Analysis | INFO | 
+Distribution for marital:
+          Count  Percentage
+marital                    
+married    2509       60.91
+single     1153       27.99
+divorced    446       10.83
+NaN          11        0.27
+2025-01-01 19:35:19 | Analysis | INFO | 
+Distribution for education:
+                     Count  Percentage
+education                             
+university.degree     1264       30.69
+high.school            921       22.36
+basic.9y               574       13.94
+professional.course    535       12.99
+basic.4y               429       10.42
+basic.6y               228        5.54
+NaN                    167        4.05
+illiterate               1        0.02
+2025-01-01 19:35:19 | Analysis | INFO | 
+Distribution for default:
+         Count  Percentage
+default                   
+no        3315       80.48
+NaN        803       19.50
+yes          1        0.02
+2025-01-01 19:35:19 | Analysis | INFO | 
+Distribution for housing:
+         Count  Percentage
+housing                   
+yes       2175       52.80
+no        1839       44.65
+NaN        105        2.55
+2025-01-01 19:35:19 | Analysis | INFO | 
+Distribution for loan:
+      Count  Percentage
+loan                   
+no     3349       81.31
+yes     665       16.14
+NaN     105        2.55
+2025-01-01 19:35:19 | Analysis | INFO | 
+Distribution for contact:
+           Count  Percentage
+contact                     
+cellular    2652       64.38
+telephone   1467       35.62
+2025-01-01 19:35:19 | Analysis | INFO | 
+Distribution for month:
+       Count  Percentage
+month                   
+may     1378       33.45
+jul      711       17.26
+aug      636       15.44
+jun      530       12.87
+nov      446       10.83
+apr      215        5.22
+oct       69        1.68
+sep       64        1.55
+mar       48        1.17
+dec       22        0.53
+2025-01-01 19:35:19 | Analysis | INFO | 
+Distribution for day_of_week:
+             Count  Percentage
+day_of_week                   
+thu            860       20.88
+mon            855       20.76
+tue            841       20.42
+wed            795       19.30
+fri            768       18.65
+2025-01-01 19:35:19 | Analysis | INFO | 
+Distribution for poutcome:
+             Count  Percentage
+poutcome                      
+nonexistent   3523       85.53
+failure        454       11.02
+success        142        3.45
+2025-01-01 19:35:20 | Analysis | INFO | Training Logistic Regression ...
+2025-01-01 19:35:20 | Analysis | INFO | Logistic Regression Classification Report:
+              precision    recall  f1-score   support
+
+           0     0.7011    0.8597    0.7723       734
+           1     0.8187    0.6335    0.7143       734
+
+    accuracy                         0.7466      1468
+   macro avg     0.7599    0.7466    0.7433      1468
+weighted avg     0.7599    0.7466    0.7433      1468
+
+2025-01-01 19:35:20 | Analysis | INFO | Logistic Regression Train Accuracy: 0.7384
+2025-01-01 19:35:20 | Analysis | INFO | Logistic Regression Test Accuracy: 0.7466
+2025-01-01 19:35:20 | Analysis | INFO | Logistic Regression Precision: 0.8187
+2025-01-01 19:35:20 | Analysis | INFO | Logistic Regression Recall: 0.6335
+2025-01-01 19:35:20 | Analysis | INFO | Logistic Regression F1 Score: 0.7143
+2025-01-01 19:35:20 | Analysis | INFO | Logistic Regression ROC AUC: 0.7966
+2025-01-01 19:35:20 | Analysis | INFO | Training Logistic Regression ...
+2025-01-01 19:35:20 | Analysis | INFO | Logistic Regression Classification Report:
+              precision    recall  f1-score   support
+
+           0     0.7011    0.8597    0.7723       734
+           1     0.8187    0.6335    0.7143       734
+
+    accuracy                         0.7466      1468
+   macro avg     0.7599    0.7466    0.7433      1468
+weighted avg     0.7599    0.7466    0.7433      1468
+
+2025-01-01 19:35:20 | Analysis | INFO | Logistic Regression Train Accuracy: 0.7384
+2025-01-01 19:35:20 | Analysis | INFO | Logistic Regression Test Accuracy: 0.7466
+2025-01-01 19:35:20 | Analysis | INFO | Logistic Regression Precision: 0.8187
+2025-01-01 19:35:20 | Analysis | INFO | Logistic Regression Recall: 0.6335
+2025-01-01 19:35:20 | Analysis | INFO | Logistic Regression F1 Score: 0.7143
+2025-01-01 19:35:20 | Analysis | INFO | Logistic Regression ROC AUC: 0.7966
+2025-01-01 19:35:21 | Analysis | INFO | Training Decision Tree ...
+2025-01-01 19:35:21 | Analysis | INFO | Decision Tree Classification Report:
+              precision    recall  f1-score   support
+
+           0     1.0000    0.8910    0.9424       734
+           1     0.9017    1.0000    0.9483       734
+
+    accuracy                         0.9455      1468
+   macro avg     0.9509    0.9455    0.9453      1468
+weighted avg     0.9509    0.9455    0.9453      1468
+
+2025-01-01 19:35:21 | Analysis | INFO | Decision Tree Train Accuracy: 0.9997
+2025-01-01 19:35:21 | Analysis | INFO | Decision Tree Test Accuracy: 0.9455
+2025-01-01 19:35:21 | Analysis | INFO | Decision Tree Precision: 0.9017
+2025-01-01 19:35:21 | Analysis | INFO | Decision Tree Recall: 1.0000
+2025-01-01 19:35:21 | Analysis | INFO | Decision Tree F1 Score: 0.9483
+2025-01-01 19:35:21 | Analysis | INFO | Decision Tree ROC AUC: 0.9458
+2025-01-01 19:35:21 | Analysis | INFO | Training KNN ...
+2025-01-01 19:35:21 | Analysis | INFO | KNN Classification Report:
+              precision    recall  f1-score   support
+
+           0     0.9680    0.7425    0.8404       734
+           1     0.7912    0.9755    0.8737       734
+
+    accuracy                         0.8590      1468
+   macro avg     0.8796    0.8590    0.8571      1468
+weighted avg     0.8796    0.8590    0.8571      1468
+
+2025-01-01 19:35:21 | Analysis | INFO | KNN Train Accuracy: 0.9008
+2025-01-01 19:35:21 | Analysis | INFO | KNN Test Accuracy: 0.8590
+2025-01-01 19:35:21 | Analysis | INFO | KNN Precision: 0.7912
+2025-01-01 19:35:21 | Analysis | INFO | KNN Recall: 0.9755
+2025-01-01 19:35:21 | Analysis | INFO | KNN F1 Score: 0.8737
+2025-01-01 19:35:21 | Analysis | INFO | KNN ROC AUC: 0.9372
+2025-01-01 19:35:22 | Analysis | INFO | Training SVM ...
+2025-01-01 19:35:25 | Analysis | INFO | SVM Classification Report:
+              precision    recall  f1-score   support
+
+           0     0.7538    0.8801    0.8121       734
+           1     0.8560    0.7125    0.7777       734
+
+    accuracy                         0.7963      1468
+   macro avg     0.8049    0.7963    0.7949      1468
+weighted avg     0.8049    0.7963    0.7949      1468
+
+2025-01-01 19:35:25 | Analysis | INFO | SVM Train Accuracy: 0.8062
+2025-01-01 19:35:25 | Analysis | INFO | SVM Test Accuracy: 0.7963
+2025-01-01 19:35:25 | Analysis | INFO | SVM Precision: 0.8560
+2025-01-01 19:35:25 | Analysis | INFO | SVM Recall: 0.7125
+2025-01-01 19:35:25 | Analysis | INFO | SVM F1 Score: 0.7777
+2025-01-01 19:35:25 | Analysis | INFO | SVM ROC AUC: 0.8926
+2025-01-01 19:35:26 | Analysis | INFO | 
+=== Untuned Model Comparison ===   <- ADD
+2025-01-01 19:35:26 | Analysis | INFO | ### Comparison Table (Untuned)
+| Model               |   Train Time (s) |   Train Accuracy |   Test Accuracy |   Precision |   Recall |   F1 Score |   ROC AUC |
+|:--------------------|-----------------:|-----------------:|----------------:|------------:|---------:|-----------:|----------:|
+| Logistic Regression |             0.04 |           0.7384 |          0.7466 |      0.8187 |   0.6335 |     0.7143 |    0.7966 |
+| Decision Tree       |             0.02 |           0.9997 |          0.9455 |      0.9017 |   1      |     0.9483 |    0.9458 |
+| KNN                 |             0    |           0.9008 |          0.859  |      0.7912 |   0.9755 |     0.8737 |    0.9372 |
+| SVM                 |             2.1  |           0.8062 |          0.7963 |      0.856  |   0.7125 |     0.7777 |    0.8926 |
+2025-01-01 19:35:26 | Analysis | INFO | 
+Starting hyperparameter tuning for Logistic Regression...
+2025-01-01 19:35:34 | Analysis | INFO | Best Params for Logistic Regression: {'C': 10, 'l1_ratio': 0.9, 'max_iter': 1000, 'penalty': 'elasticnet', 'solver': 'saga'}
+2025-01-01 19:35:34 | Analysis | INFO | Train Accuracy: 0.7391
+2025-01-01 19:35:34 | Analysis | INFO | Test Accuracy: 0.7466
+2025-01-01 19:35:34 | Analysis | INFO | Test ROC AUC: 0.7966
+2025-01-01 19:35:34 | Analysis | INFO | GridSearch took 7.98s
+2025-01-01 19:35:40 | Analysis | INFO | Cross-Val Accuracy (Training) for Logistic Regression: 0.7377 ± 0.0090
+2025-01-01 19:35:40 | Analysis | INFO | 
+Analyzing Permutation Feature Importance for Logistic Regression (Tuned)...
+2025-01-01 19:35:40 | Analysis | INFO | Top 10 Most Important Features for Logistic Regression (Tuned):
+2025-01-01 19:35:40 | Analysis | INFO | 
+| feature           |   importance_mean |   importance_std |
+|:------------------|------------------:|-----------------:|
+| emp.var.rate      |        0.264441   |       0.0214222  |
+| cons.price.idx    |        0.0797003  |       0.0112181  |
+| contact_telephone |        0.0309264  |       0.00465214 |
+| poutcome_success  |        0.0213896  |       0.0056107  |
+| month_mar         |        0.019891   |       0.00203905 |
+| cons.conf.idx     |        0.0189373  |       0.00438091 |
+| nr.employed       |        0.0147139  |       0.00405528 |
+| age               |        0.0128065  |       0.00369107 |
+| previous          |        0.00803815 |       0.00407355 |
+| month_aug         |        0.00749319 |       0.003681   |
+2025-01-01 19:35:41 | Analysis | INFO | 
+Generating Partial Dependence Plots for Logistic Regression (Tuned)...
+2025-01-01 19:35:41 | Analysis | INFO | PDP for feature 'emp.var.rate' saved as output/pdp_Logistic_Regression_Tuned_emp.var.rate.png
+2025-01-01 19:35:41 | Analysis | INFO | PDP for feature 'cons.price.idx' saved as output/pdp_Logistic_Regression_Tuned_cons.price.idx.png
+2025-01-01 19:35:41 | Analysis | WARNING | Could not compute PDP for 'contact_telephone' (possibly no variation or model limitation): cannot reshape array of size 1 into shape (2)
+2025-01-01 19:35:41 | Analysis | WARNING | Could not compute PDP for 'poutcome_success' (possibly no variation or model limitation): cannot reshape array of size 1 into shape (2)
+2025-01-01 19:35:41 | Analysis | WARNING | Could not compute PDP for 'month_mar' (possibly no variation or model limitation): cannot reshape array of size 1 into shape (2)
+2025-01-01 19:35:41 | Analysis | INFO | 
+Starting hyperparameter tuning for Decision Tree...
+2025-01-01 19:35:42 | Analysis | INFO | Best Params for Decision Tree: {'max_depth': None, 'min_samples_leaf': 1, 'min_samples_split': 2}
+2025-01-01 19:35:42 | Analysis | INFO | Train Accuracy: 0.9997
+2025-01-01 19:35:42 | Analysis | INFO | Test Accuracy: 0.9455
+2025-01-01 19:35:42 | Analysis | INFO | Test ROC AUC: 0.9458
+2025-01-01 19:35:42 | Analysis | INFO | GridSearch took 0.51s
+2025-01-01 19:35:42 | Analysis | INFO | Cross-Val Accuracy (Training) for Decision Tree: 0.9311 ± 0.0088
+2025-01-01 19:35:42 | Analysis | INFO | 
+Analyzing Permutation Feature Importance for Decision Tree (Tuned)...
+2025-01-01 19:35:42 | Analysis | INFO | Top 10 Most Important Features for Decision Tree (Tuned):
+2025-01-01 19:35:42 | Analysis | INFO | 
+| feature           |   importance_mean |   importance_std |
+|:------------------|------------------:|-----------------:|
+| euribor3m         |         0.245095  |       0.00711062 |
+| nr.employed       |         0.230654  |       0.00688786 |
+| age               |         0.165395  |       0.00506841 |
+| campaign          |         0.110354  |       0.00663251 |
+| cons.conf.idx     |         0.101771  |       0.00361998 |
+| pdays             |         0.076158  |       0.00446484 |
+| contact_telephone |         0.053951  |       0.00646816 |
+| cons.price.idx    |         0.0472752 |       0.00234396 |
+| marital_married   |         0.0401907 |       0.00295361 |
+| housing_yes       |         0.0388283 |       0.00548355 |
+2025-01-01 19:35:42 | Analysis | INFO | 
+Generating Partial Dependence Plots for Decision Tree (Tuned)...
+2025-01-01 19:35:42 | Analysis | INFO | PDP for feature 'euribor3m' saved as output/pdp_Decision_Tree_Tuned_euribor3m.png
+2025-01-01 19:35:43 | Analysis | INFO | PDP for feature 'nr.employed' saved as output/pdp_Decision_Tree_Tuned_nr.employed.png
+2025-01-01 19:35:43 | Analysis | INFO | PDP for feature 'age' saved as output/pdp_Decision_Tree_Tuned_age.png
+2025-01-01 19:35:43 | Analysis | INFO | PDP for feature 'campaign' saved as output/pdp_Decision_Tree_Tuned_campaign.png
+2025-01-01 19:35:43 | Analysis | INFO | PDP for feature 'cons.conf.idx' saved as output/pdp_Decision_Tree_Tuned_cons.conf.idx.png
+2025-01-01 19:35:43 | Analysis | INFO | 
+Starting hyperparameter tuning for KNN...
+2025-01-01 19:35:43 | Analysis | INFO | Best Params for KNN: {'n_neighbors': 3, 'weights': 'distance'}
+2025-01-01 19:35:43 | Analysis | INFO | Train Accuracy: 0.9997
+2025-01-01 19:35:43 | Analysis | INFO | Test Accuracy: 0.9094
+2025-01-01 19:35:43 | Analysis | INFO | Test ROC AUC: 0.9481
+2025-01-01 19:35:43 | Analysis | INFO | GridSearch took 0.21s
+2025-01-01 19:35:43 | Analysis | INFO | Cross-Val Accuracy (Training) for KNN: 0.8918 ± 0.0139
+2025-01-01 19:35:43 | Analysis | INFO | 
+Analyzing Permutation Feature Importance for KNN (Tuned)...
+2025-01-01 19:35:45 | Analysis | INFO | Top 10 Most Important Features for KNN (Tuned):
+2025-01-01 19:35:45 | Analysis | INFO | 
+| feature         |   importance_mean |   importance_std |
+|:----------------|------------------:|-----------------:|
+| age             |        0.0741144  |       0.00573827 |
+| pdays           |        0.0535422  |       0.00146735 |
+| campaign        |        0.0410082  |       0.00391082 |
+| cons.conf.idx   |        0.030109   |       0.00409627 |
+| previous        |        0.0201635  |       0.00185806 |
+| cons.price.idx  |        0.0167575  |       0.0036709  |
+| housing_yes     |        0.0133515  |       0.00274516 |
+| day_of_week_wed |        0.0115804  |       0.00328109 |
+| day_of_week_thu |        0.00790191 |       0.00226339 |
+| day_of_week_mon |        0.00667575 |       0.00169069 |
+2025-01-01 19:35:45 | Analysis | INFO | 
+Generating Partial Dependence Plots for KNN (Tuned)...
+2025-01-01 19:35:46 | Analysis | INFO | PDP for feature 'age' saved as output/pdp_KNN_Tuned_age.png
+2025-01-01 19:35:47 | Analysis | INFO | PDP for feature 'pdays' saved as output/pdp_KNN_Tuned_pdays.png
+2025-01-01 19:35:48 | Analysis | INFO | PDP for feature 'campaign' saved as output/pdp_KNN_Tuned_campaign.png
+2025-01-01 19:35:48 | Analysis | INFO | PDP for feature 'cons.conf.idx' saved as output/pdp_KNN_Tuned_cons.conf.idx.png
+2025-01-01 19:35:48 | Analysis | INFO | PDP for feature 'previous' saved as output/pdp_KNN_Tuned_previous.png
+2025-01-01 19:35:48 | Analysis | INFO | 
+Starting hyperparameter tuning for SVM...
+2025-01-01 19:36:47 | Analysis | INFO | Best Params for SVM: {'C': 10, 'gamma': 1, 'kernel': 'rbf'}
+2025-01-01 19:36:48 | Analysis | INFO | Train Accuracy: 0.9980
+2025-01-01 19:36:48 | Analysis | INFO | Test Accuracy: 0.9877
+2025-01-01 19:36:48 | Analysis | INFO | Test ROC AUC: 0.9973
+2025-01-01 19:36:48 | Analysis | INFO | GridSearch took 57.68s
+2025-01-01 19:36:56 | Analysis | INFO | Cross-Val Accuracy (Training) for SVM: 0.9852 ± 0.0027
+2025-01-01 19:36:56 | Analysis | INFO | 
+Analyzing Permutation Feature Importance for SVM (Tuned)...
+2025-01-01 19:37:45 | Analysis | INFO | Top 10 Most Important Features for SVM (Tuned):
+2025-01-01 19:37:45 | Analysis | INFO | 
+| feature                     |   importance_mean |   importance_std |
+|:----------------------------|------------------:|-----------------:|
+| nr.employed                 |          0.289782 |       0.00622245 |
+| age                         |          0.264986 |       0.0039486  |
+| cons.conf.idx               |          0.258447 |       0.00692816 |
+| cons.price.idx              |          0.257493 |       0.00809452 |
+| emp.var.rate                |          0.246322 |       0.00510854 |
+| euribor3m                   |          0.241553 |       0.00805545 |
+| previous                    |          0.220436 |       0.00477034 |
+| marital_married             |          0.21267  |       0.00317763 |
+| housing_yes                 |          0.209673 |       0.00608368 |
+| education_university.degree |          0.200409 |       0.0115716  |
+2025-01-01 19:37:45 | Analysis | INFO | 
+Generating Partial Dependence Plots for SVM (Tuned)...
+2025-01-01 19:37:54 | Analysis | INFO | PDP for feature 'nr.employed' saved as output/pdp_SVM_Tuned_nr.employed.png
+2025-01-01 19:38:50 | Analysis | INFO | PDP for feature 'age' saved as output/pdp_SVM_Tuned_age.png
+2025-01-01 19:39:12 | Analysis | INFO | PDP for feature 'cons.conf.idx' saved as output/pdp_SVM_Tuned_cons.conf.idx.png
+2025-01-01 19:39:35 | Analysis | INFO | PDP for feature 'cons.price.idx' saved as output/pdp_SVM_Tuned_cons.price.idx.png
+2025-01-01 19:39:44 | Analysis | INFO | PDP for feature 'emp.var.rate' saved as output/pdp_SVM_Tuned_emp.var.rate.png
+2025-01-01 19:39:45 | Analysis | INFO | 
+=== Tuned Model Comparison ===   <- ADD
+2025-01-01 19:39:45 | Analysis | INFO | ### Comparison Table (Tuned)
+| Model               |   Train Time (s) |   Train Accuracy |   Test Accuracy |   ROC AUC | Best Params                                                                             |
+|:--------------------|-----------------:|-----------------:|----------------:|----------:|:----------------------------------------------------------------------------------------|
+| Logistic Regression |             7.98 |           0.7391 |          0.7466 |    0.7966 | {'C': 10, 'l1_ratio': 0.9, 'max_iter': 1000, 'penalty': 'elasticnet', 'solver': 'saga'} |
+| Decision Tree       |             0.51 |           0.9997 |          0.9455 |    0.9458 | {'max_depth': None, 'min_samples_leaf': 1, 'min_samples_split': 2}                      |
+| KNN                 |             0.21 |           0.9997 |          0.9094 |    0.9481 | {'n_neighbors': 3, 'weights': 'distance'}                                               |
+| SVM                 |            57.68 |           0.998  |          0.9877 |    0.9973 | {'C': 10, 'gamma': 1, 'kernel': 'rbf'}                                                  |
