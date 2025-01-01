@@ -8,7 +8,9 @@ This project aims to increase long-term deposit accounts through advanced predic
 The primary goal is to enhance telemarketing campaign efficiency by reducing unnecessary client contacts while maintaining successful outcomes. This involves minimizing phone calls and associated costs while maximizing the productive use of contact center resources.
 
 **Conversion Enhancement**
-The focus is on maintaining or improving term deposit subscription rates while optimizing resource allocation. Through predictive analytics, the bank can identify customers with a higher likelihood of subscribing to term deposits, leading to more targeted and cost-effective marketing decisions.
+The focus is on maintaining or improving term deposit subscription rates while optimizing resource allocation. 
+
+The bank can identify customers with a higher likelihood of subscribing to term deposits through predictive analytics, leading to more targeted and cost-effective marketing decisions.
 
 ## Expected Outcomes
 The implementation of this data-driven approach will enable:
