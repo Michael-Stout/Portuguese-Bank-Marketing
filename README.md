@@ -85,7 +85,7 @@ These clusters of features often move together, reflecting broad economic condit
 ![Housing vs. Target](output/relationship_housing_target.png "Housing vs. Target")
 
 - **Breakdown**: ~52.80% “yes” to housing loan, ~44.65% “no.”  
-- **Observation**: No strict relationship with deposit subscription alone, but it can still play a role in combination with other financial indicators.
+- **Observation**: There is no strict relationship with deposit subscription alone, but it can still play a role in other financial indicators.
 
 ### **Loan vs. Target**
 ![Loan vs. Target](output/relationship_loan_target.png "Loan vs. Target")
@@ -220,7 +220,7 @@ These help us understand **how** each model arrives at its predictions and **why
    ![Partial Dependence - cons.price.idx (Logistic Regression)](output/pdp_Logistic_Regression_Tuned_cons.price.idx.png "cons.price.idx PDP")
    - **Interpretation**:  
      - Mid-range consumer price indices correlate with higher predicted probability.  
-     - Very low or very high `cons.price.idx` values drive probabilities lower.
+     - Very low or high `cons.price.idx` values drive lower probabilities.
 
 ### **C) Confusion Matrix**
 ![Confusion Matrix - Logistic Regression (Tuned)](output/confusion_matrix_Logistic_Regression_Tuned.png "Confusion Matrix (Logistic Regression)")
@@ -241,7 +241,7 @@ These help us understand **how** each model arrives at its predictions and **why
 
 - **Interpretation**:  
   - Demonstrates trade-offs between precision and recall across different probability thresholds.  
-  - Maintains decent precision for a broad range of recall but lower than SVM or Decision Tree.
+  - Maintains decent precision for a broad recall range but lower than SVM or Decision Tree.
 
 ---
 
@@ -252,7 +252,7 @@ These help us understand **how** each model arrives at its predictions and **why
 
 - **Interpretation**:  
   - `euribor3m`, `nr.employed`, and `age` are among the top drivers for the Decision Tree.  
-  - `campaign` and `cons.conf.idx` also show notable importance.
+  - `campaign` and `cons.conf.idx` also are important.
 
 ### **B) Partial Dependence Plots**
 
@@ -429,6 +429,4 @@ These help us understand **how** each model arrives at its predictions and **why
 - **KNN**: Balances good accuracy (~90.94%) with quick training but can still misclassify some “no” as “yes.”
 - **SVM**: Best overall at ~98.77% accuracy, but slow and resource-intensive.
 
-Overall, **SVM (Tuned)** and **Decision Tree (Tuned)** provide top performance, with SVM edging out the others in accuracy and AUC. However, the Decision Tree’s speed may be advantageous if computing resources are limited or if the dataset scales significantly.
-
-*(End of Full Report)*
+Overall, **SVM (Tuned)** and **Decision Tree (Tuned)** provide top performance, with SVM edging out the others in accuracy and AUC. However, the Decision Tree’s speed may be advantageous if computing resources are limited or the dataset scales significantly.
